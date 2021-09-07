@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>References &#8212; Initialization of homoclinic orbits near Bogdanov-Takens points</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Bogdanov-Takens normal form" href="BogdanovTakens.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Initialization of homoclinic orbits near Bogdanov-Takens points</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Morris-Lecar
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-LecarGenSym.html">
+   Generate system files for Morris-Lecar in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-Lecar.html">
+   Morris-Lecar Model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  CO-oxidation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidationGenSym.html">
+   Generate system files for CO-oxidation in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidation.html">
+   CO-oxidation in a platinum model.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predator Prey
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPreyGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPrey.html">
+   Predator-prey system with constant harvesting rate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bazykin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BazykinGenSym.html">
+   Generate system files for the Bazykin’s predator-prey system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Bazykin.html">
+   Bazykin’s predator-prey ecosystem
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  IFOC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOCGenSym.html">
+   Generate system files for the indirect field oriented control system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOC.html">
+   Indirect field oriented control system
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Extended Lorenz 84
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lorenz84GenSym.html">
+   Generate system files for the extended Lorenz-84 model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extendedLorenz84model.html">
+   The extended Lorenz-84 model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  SIR model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodelGenSym.html">
+   Generate system files for SIR model with the standard incidence rate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodel.html">
+   SIR model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hodgkin-Huxley
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxleyGenSym.html">
+   Generate system files for Hodgkin-Huxley equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxley.html">
+   Hodgkin Huxley equations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Homoclinic RG flows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflowsGenSym.html">
+   Generate system files for Homoclinic RG flows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflows.html">
+   Homoclinic RG flows
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bogdanov-Takens
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakensNormalFormGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakens.html">
+   Bogdanov-Takens normal form
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/references.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Freferences.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="id1"><dl class="citation">
+<dt class="label" id="id2"><span class="brackets">AHGKM16</span></dt>
+<dd><p>B. Al-Hdaibat, W. Govaerts, Yu. A. Kuznetsov, and H. G. E. Meijer. Initialization of homoclinic solutions near bogdanov–takens points: lindstedt–poincaré compared with regular perturbation method. <em>SIAM Journal on Applied Dynamical Systems</em>, 15(2):952–980, 2016. <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1137/15M1017491">arXiv:https://doi.org/10.1137/15M1017491</a>, <a class="reference external" href="https://doi.org/10.1137/15M1017491">doi:10.1137/15M1017491</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">BAH15</span></dt>
+<dd><p>Willy Govaerts Bashir Al-Hdaibat. Continuation of homoclinic orbits starting from a generic bogdanov-takens point with matcont. <em>SourceForge</em>, 2015. URL: <a class="reference external" href="https://sourceforge.net/projects/matcont/files/NewestDocumentation/MatContODE/AdvancedTutorials/labinithom2.pdf">https://sourceforge.net/projects/matcont/files/NewestDocumentation/MatContODE/AdvancedTutorials/labinithom2.pdf</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets">BR00</span></dt>
+<dd><p>A.S. Bazanella and R. Reginatto. Robustness margins for indirect field-oriented control of induction motors. <em>IEEE Trans. Automat. Contr.</em>, 45(6):1226–1231, June 2000. <a class="reference external" href="https://doi.org/10.1109/9.863613">doi:10.1109/9.863613</a>.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets">Baz85</span></dt>
+<dd><p>A. D. Bazykin. <em>\cyr Matematicheskaya biofizika vzaimodeĭ \cyr stvuyushchikh populyatsiĭ</em>. “Nauka”, Moscow, 1985.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets">Bey94</span></dt>
+<dd><p>W.-J. Beyn. Numerical analysis of homoclinic orbits emanating from a takens-bogdanov point. <em>IMA J Numer Anal</em>, 14(3):381–410, 1994. <a class="reference external" href="https://doi.org/10.1093/imanum/14.3.381">doi:10.1093/imanum/14.3.381</a>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">BS79</span></dt>
+<dd><p>F. Brauer and A.C. Soudack. Stability regions and transition phenomena for harvested predator-prey systems. <em>J. Math. Biol.</em>, 7(4):319–337, 1979. <a class="reference external" href="https://doi.org/10.1007/bf00275152">doi:10.1007/bf00275152</a>.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">BIK78</span></dt>
+<dd><p>V.I. Bykov, G.S. Iablonskii, and V.F. Kim. Simple-model of kinetic auto-oscillation model in catalytic reaction of co-oxidation. <em>Doklady Akademii Nauk SSSR</em>, 242:637–639, 1978.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets">DGK+08</span></dt>
+<dd><p>A. Dhooge, W. Govaerts, Yu.A. Kuznetsov, H.G.E. Meijer, and B. Sautois. New features of the software matcontfor bifurcation analysis of dynamical systems. <em>Mathematical and Computer Modelling of Dynamical Systems</em>, 14(2):147–175, April 2008. <a class="reference external" href="https://doi.org/10.1080/13873950701742754">doi:10.1080/13873950701742754</a>.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">HH52a</span></dt>
+<dd><p>A. L. Hodgkin and A. F. Huxley. A quantitative description of membrane current and its application to conduction and excitation in nerve. <em>The Journal of Physiology</em>, 117(4):500–544, 1952. <a class="reference external" href="https://arxiv.org/abs/https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764">arXiv:https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1113/jphysiol.1952.sp004764">doi:https://doi.org/10.1113/jphysiol.1952.sp004764</a>.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets">HH52b</span></dt>
+<dd><p>A. L. Hodgkin and A. F. Huxley. Currents carried by sodium and potassium ions through the membrane of the giant axon of loligo. <em>The Journal of Physiology</em>, 116(4):449–472, 1952. <a class="reference external" href="https://arxiv.org/abs/https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004717">arXiv:https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004717</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1113/jphysiol.1952.sp004717">doi:https://doi.org/10.1113/jphysiol.1952.sp004717</a>.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">JP21</span></dt>
+<dd><p>C. B. Jepsen and F. K. Popov. Homoclinic rg flows, or when relevant operators become irrelevant. <em>arXiv</em>, 2021. URL: <a class="reference external" href="arXiv:2105.01625v1">arXiv:2105.01625v1</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">Khi90</span></dt>
+<dd><p>A. I. Khibnik. <em>LINLBF: A Program for Continuation and Bifurcation Analysis of Equilibria Up to Codimension Three</em>, pages 283–296. Springer Netherlands, Dordrecht, 1990. <a class="reference external" href="https://doi.org/10.1007/978-94-009-0659-4_19">doi:10.1007/978-94-009-0659-4_19</a>.</p>
+</dd>
+<dt class="label" id="id3"><span class="brackets">Kuz21</span></dt>
+<dd><p>Bosschaert M.M. Kuznetsov, I.A. New homoclinic predictor near codim 2 bogdanov-takens points in $n$-dimensional systems. <em>arXiv</em>, 2021.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets">KMGS08</span></dt>
+<dd><p>Yu.A. Kuznetsov, H.G.E. Meijer, W. Govaerts, and B. Sautois. Switching to nonhyperbolic cycles from codim 2 bifurcations of equilibria in odes. <em>Physica D: Nonlinear Phenomena</em>, 237(23):3061–3068, December 2008. <a class="reference external" href="https://doi.org/10.1016/j.physd.2008.06.006">doi:10.1016/j.physd.2008.06.006</a>.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets">Kuz04</span></dt>
+<dd><p>Yu.A Kuznetsov. <em>Elements of Applied Bifurcation Theory</em>. Volume 112 of Applied Mathematical Sciences. Springer-Verlag, New York, third edition, 2004. ISBN 0-387-21906-4. <a class="reference external" href="https://doi.org/10.1007/978-1-4757-3978-7">doi:10.1007/978-1-4757-3978-7</a>.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">ML81</span></dt>
+<dd><p>C. Morris and H. Lecar. Voltage oscillations in the barnacle giant muscle fiber. <em>Biophysical Journal</em>, 35(1):193–213, July 1981. <a class="reference external" href="https://doi.org/10.1016/s0006-3495(81)84782-0">doi:10.1016/s0006-3495(81)84782-0</a>.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">SGAR08</span></dt>
+<dd><p>F. Salas, F. Gordillo, J. Aracil, and R. Reginatto. Codimension-two bifurcations in indirect field oriented control of induction motor drives. <em>Int. J. Bifurcation Chaos</em>, 18(03):779–792, March 2008. <a class="reference external" href="https://doi.org/10.1142/s0218127408020641">doi:10.1142/s0218127408020641</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">SZ14</span></dt>
+<dd><p>Chunhua Shan and Huaiping Zhu. Bifurcations and complex dynamics of an sir model with the impact of the number of hospital beds. <em>Journal of Differential Equations</em>, 257(5):1662–1688, September 2014. <a class="reference external" href="https://doi.org/10.1016/j.jde.2014.05.030">doi:10.1016/j.jde.2014.05.030</a>.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets">ShilNikovNN95</span></dt>
+<dd><p>A. Shil'Nikov, G. Nicolis, and C. Nicolis. Bifurcation and predictability analysis of a low-order atmospheric circulation model. <em>Int. J. Bifurcation Chaos</em>, 05(06):1701–1711, December 1995. <a class="reference external" href="https://doi.org/10.1142/s0218127495001253">doi:10.1142/s0218127495001253</a>.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets">SEL+14</span></dt>
+<dd><p>Jan Sieber, Koen Engelborghs, Tatyana Luzyanina, Giovanni Samaey, and Dirk Roose. Dde-biftool manual - bifurcation analysis of delay differential equations. 2014. <a class="reference external" href="https://arxiv.org/abs/arXiv:1406.7144">arXiv:arXiv:1406.7144</a>.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">vV03</span></dt>
+<dd><p>Lennaert van Veen. Baroclinic flow and the lorenz-84 model. <em>Int. J. Bifurcation Chaos</em>, 13(08):2117–2139, August 2003. <a class="reference external" href="https://doi.org/10.1142/s0218127403007904">doi:10.1142/s0218127403007904</a>.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets">XR99</span></dt>
+<dd><p>Dongmei Xiao and Shigui Ruan. Bogdanov-Takens bifurcations in predator-prey systems with constant rate harvesting. In <em>Differential equations with applications to biology (Halifax, NS, 1997)</em>, volume 21 of Fields Inst. Commun., pages 493–506. Amer. Math. Soc., Providence, RI, 1999.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="BogdanovTakens.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Bogdanov-Takens normal form</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Maikel Bosschaert<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

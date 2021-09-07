@@ -1,0 +1,40 @@
+matcontpath = '../';
+addpath(matcontpath);
+addpath([matcontpath, '/Utilities']);
+if isOctave
+  pkg load symbolic % for GNU Octave
+end
+
+system_name = 'SIRmodel';
+
+coordsnames = {'S', 'I', 'R'};
+parnames = {'mu1', 'b'};
+
+syms(parnames{:});       % create symbol for alpha and delta
+par=cell2sym(parnames);  % now alpha1 is par(1) etc
+syms(coordsnames{:});    % create symbol for alpha and delta
+coords=cell2sym(coordsnames); % create 1 x n vector for coordinates
+
+A = 20;
+mu0 = 10;
+d = 1/10;
+nu = 1;
+beta = 11.5;
+
+mu = @(b,I) mu0 + (mu1-mu0)*b/(I+b);
+dS_dt = A-d*S-beta*S*I/(S+I+R);
+dI_dt = -(d+nu)*I-mu(b,I)*I+beta*S*I/(S+I+R);
+dR_dt = mu(b,I)*I-d*R;
+system = [dS_dt; dI_dt; dR_dt];
+
+suc = generate_directional_derivatives(...
+  system,...   % n x 1 array of derivative symbolic expressions
+  coords,... % 1 x n array of symbols for states
+  par,...      % 1 x np array of symbols used for parameters
+  system_name,... % argument specifying the system name
+  [matcontpath, 'Systems/']... % directory to save to file
+);
+
+order = 3;
+suc = generate_multilinear_forms(system_name, system, coords, par, order, ...
+        [matcontpath, 'Systems/']);

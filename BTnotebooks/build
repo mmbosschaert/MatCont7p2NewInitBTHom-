@@ -1,0 +1,15 @@
+#!/bin/bash
+
+jupytext --sync *.md
+mv ./*.md ../
+mv ../intro.md ./
+mv ../references.md ./
+
+# jupyter-book build --all ./
+jupyter-book build ./
+# jupyter-book build --builder latex ./
+# jupyter-book build --builder pdfhtml ./
+
+mv ../*.md ./
+
+# cp -R ./_build /var/www/html/BogdanovTakensDemoBook

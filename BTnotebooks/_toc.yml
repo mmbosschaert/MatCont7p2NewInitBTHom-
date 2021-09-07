@@ -1,0 +1,46 @@
+format: jb-book
+root: intro
+parts:
+- caption: Morris-Lecar
+  chapters:
+  - file: Morris-LecarGenSym
+  - file: Morris-Lecar
+- caption: CO-oxidation
+  chapters:
+  - file: CO-oxidationGenSym
+  - file: CO-oxidation
+- caption: Predator Prey
+  chapters:
+  - file: PredatorPreyGenSym
+  - file: PredatorPrey
+- caption: Bazykin
+  chapters:
+  - file: BazykinGenSym
+  - file: Bazykin
+- caption: IFOC
+  chapters:
+  - file: IFOCGenSym
+  - file: IFOC
+- caption: Extended Lorenz 84
+  chapters:
+  - file: Lorenz84GenSym
+  - file: extendedLorenz84model
+- caption: SIR model
+  chapters:
+  - file: SIRmodelGenSym
+  - file: SIRmodel
+- caption: Hodgkin-Huxley
+  chapters:
+  - file: HodgkinHuxleyGenSym
+  - file: HodgkinHuxley
+- caption: Homoclinic RG flows
+  chapters:
+  - file: HomoclinicRGflowsGenSym 
+  - file: HomoclinicRGflows
+- caption: Bogdanov-Takens
+  chapters:
+  - file: BogdanovTakensNormalFormGenSym
+  - file: BogdanovTakens
+- caption: References
+  chapters:
+  - file: references.md
