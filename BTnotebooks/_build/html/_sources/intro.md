@@ -1,4 +1,4 @@
-# Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+# Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
 
 In this Jupyter Book we will demonstrate the effectiveness of the homoclinic
 predictors derived in {cite}`Bosschaert@2021` to start continuations of
