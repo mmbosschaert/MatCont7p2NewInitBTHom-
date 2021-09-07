@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bazykin’s predator-prey ecosystem &#8212; Initialization of homoclinic orbits near Bogdanov-Takens points</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Generate system files for the indirect field oriented control system" href="IFOCGenSym.html" />
+    <link rel="prev" title="Generate system files for the Bazykin’s predator-prey system" href="BazykinGenSym.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Initialization of homoclinic orbits near Bogdanov-Takens points</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Morris-Lecar
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-LecarGenSym.html">
+   Generate system files for Morris-Lecar in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-Lecar.html">
+   Morris-Lecar Model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  CO-oxidation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidationGenSym.html">
+   Generate system files for CO-oxidation in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidation.html">
+   CO-oxidation in a platinum model.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predator Prey
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPreyGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPrey.html">
+   Predator-prey system with constant harvesting rate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bazykin
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BazykinGenSym.html">
+   Generate system files for the Bazykin’s predator-prey system
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Bazykin’s predator-prey ecosystem
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  IFOC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOCGenSym.html">
+   Generate system files for the indirect field oriented control system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOC.html">
+   Indirect field oriented control system
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Extended Lorenz 84
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lorenz84GenSym.html">
+   Generate system files for the extended Lorenz-84 model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extendedLorenz84model.html">
+   The extended Lorenz-84 model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  SIR model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodelGenSym.html">
+   Generate system files for SIR model with the standard incidence rate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodel.html">
+   SIR model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hodgkin-Huxley
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxleyGenSym.html">
+   Generate system files for Hodgkin-Huxley equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxley.html">
+   Hodgkin Huxley equations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Homoclinic RG flows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflowsGenSym.html">
+   Generate system files for Homoclinic RG flows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflows.html">
+   Homoclinic RG flows
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bogdanov-Takens
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakensNormalFormGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakens.html">
+   Bogdanov-Takens normal form
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Bazykin.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBazykin.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Bazykin.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-matcont">
+   Load MatCont
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-the-odefile">
+   Set the odefile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-bogdanov-takens-point-manually">
+   Define Bogdanov-Takens point manually
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continue-homoclinic-curve-emanating-from-bogdanov-takens-point">
+   Continue homoclinic curve emanating from Bogdanov-Takens point
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compare-predicted-with-computed-parameters">
+   Compare predicted with computed parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bifurcation-diagram-in-phase-space-x-1-x-2">
+   Bifurcation diagram in phase-space
+   <span class="math notranslate nohighlight">
+    \((x_1,x_2)\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predictors-of-orbits-for-various-epsilons">
+     Predictors of orbits for various epsilons
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convergence-plot">
+   Convergence plot
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bazykin-s-predator-prey-ecosystem">
+<h1>Bazykin’s predator-prey ecosystem<a class="headerlink" href="#bazykin-s-predator-prey-ecosystem" title="Permalink to this headline">¶</a></h1>
+<p>This notebook demonstrates initialization of homoclinic orbits emanating form a
+generic codimension two Bogdanov-Takens bifurcation point in the following
+predator-prey ecosystem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+\begin{aligned}
+\dot x_1 &amp;= x_1 - \frac{x_1 x_2}{1+\alpha x_1} - \epsilon x_1^2, \\
+\dot x_2 &amp;= -\gamma x_2 + \frac{x_1 x_2}{1+\alpha x_1} - \delta x_2^2. \\
+\end{aligned}
+\end{cases}
+\end{split}\]</div>
+<p>The variables <span class="math notranslate nohighlight">\(x_{1}\)</span> and <span class="math notranslate nohighlight">\(x_{2}\)</span> are (scaled) population numbers of prey and
+predator, respectively, while <span class="math notranslate nohighlight">\(\alpha, \gamma, \varepsilon\)</span>, and <span class="math notranslate nohighlight">\(\delta\)</span> are
+nonnegative parameters describing the behavior of isolated populations and
+their interaction, see <span id="id1">[<a class="reference internal" href="references.html#id22">Baz85</a>, <a class="reference internal" href="references.html#id6">Kuz04</a>]</span></p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In this demo we will</p>
+<ul class="simple">
+<li><p>Define an analytically derived Bogdanov-Takens point.</p></li>
+<li><p>Start continuation of the homoclinic branch emanating from the
+Bogdanov-Takens point in two parameters <span class="math notranslate nohighlight">\((d,h)\)</span> using the new homoclinic
+smooth orbital predictor from <span id="id2">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>.</p></li>
+<li><p>Compare the predicted and computed homoclinic bifurcation curve emanating from the
+Bogdanov-Takens point in parameters space.</p></li>
+<li><p>Compare a range of predictors for the homoclinic solutions emanating from the
+Bogdanov-Takens point with the corrected homoclinic solutions curve in
+phase-space.</p></li>
+<li><p>Create a convergence plot of the different homoclinic approximations
+derived in <span id="id3">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="load-matcont">
+<h2>Load MatCont<a class="headerlink" href="#load-matcont" title="Permalink to this headline">¶</a></h2>
+<p>Before we can start using <strong>MatCont</strong> we need to add the main directory of
+<strong>MatCont,</strong> as well as various subdirectories of <strong>MatCont,</strong> to the <em>MATLAB
+search path</em>. This is done in the code below. The variable <code class="docutils literal notranslate"><span class="pre">matcont_home</span></code>
+should point to the main directory of <strong>MatCont.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
+<span class="n">matcontpath</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;../&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">(</span><span class="n">matcontpath</span><span class="p">)</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Systems&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Equilibrium&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LimitPoint&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LimitPointCycle&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Hopf&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Homoclinic&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LimitCycle&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Continuer&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MultilinearForms&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Utilities&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">groot</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;defaultTextInterpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LaTeX&#39;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-the-odefile">
+<h2>Set the odefile<a class="headerlink" href="#set-the-odefile" title="Permalink to this headline">¶</a></h2>
+<p>Next we set the variable <code class="docutils literal notranslate"><span class="pre">odefile</span></code> to the <em>system file</em> previously generated by
+the notebook <a class="reference internal" href="BazykinGenSym.html"><span class="doc std std-doc">Generate system files for the Bazykin’s predator-prey system</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">odefile</span><span class="p">=@</span><span class="n">Bazykin</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-bogdanov-takens-point-manually">
+<h2>Define Bogdanov-Takens point manually<a class="headerlink" href="#define-bogdanov-takens-point-manually" title="Permalink to this headline">¶</a></h2>
+<p>It is easy to analytically derive a Bogdanov-Takens point at</p>
+<div class="math notranslate nohighlight">
+\[(x_1, x_2) \approx (6.265765528962353, 3.601553936836365),\]</div>
+<p>with parameter values <span class="math notranslate nohighlight">\((\alpha, \delta) \approx (0.4536243277781295, 0.1751275929502174)\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bt</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6.265765528962353</span><span class="p">;</span><span class="w"> </span><span class="mf">3.601553936836365</span><span class="p">];</span><span class="w"></span>
+<span class="n">bt</span><span class="p">.</span><span class="n">par</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.4536243277781295</span><span class="p">;</span><span class="w"> </span><span class="mf">0.1751275929502174</span><span class="p">];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To refer to the parameters throughout the script we create a <strong>cell array</strong> of
+strings containing the parameter names. This is then converted into a
+<strong>struct</strong>. This allows us to refer to the parameters as <code class="docutils literal notranslate"><span class="pre">ind.parametername</span></code>,
+similar as done in <em>DDE-BifTool</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">parnames</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;alpha&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;delta&#39;</span><span class="p">};</span><span class="w"></span>
+<span class="n">cind</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">parnames</span><span class="p">;</span><span class="nb">num2cell</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">parnames</span><span class="p">))];</span><span class="w"></span>
+<span class="n">ind</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nb">struct</span><span class="p">(</span><span class="n">cind</span><span class="p">{:});</span><span class="w"></span>
+<span class="n">ap</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">ind</span><span class="p">.</span><span class="n">alpha</span><span class="w"> </span><span class="n">ind</span><span class="p">.</span><span class="n">delta</span><span class="p">];</span><span class="w"> </span><span class="c">% continuation parameters</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="continue-homoclinic-curve-emanating-from-bogdanov-takens-point">
+<h2>Continue homoclinic curve emanating from Bogdanov-Takens point<a class="headerlink" href="#continue-homoclinic-curve-emanating-from-bogdanov-takens-point" title="Permalink to this headline">¶</a></h2>
+<p>To continue the homoclinic curve emanating from the Bogdanov-Takens point we
+use the functions <code class="docutils literal notranslate"><span class="pre">BT_Hom_set_options</span></code> and <code class="docutils literal notranslate"><span class="pre">init_BT_Hom</span></code> to obtain an initial
+approximation to the homoclinic solution (<code class="docutils literal notranslate"><span class="pre">hom_x</span></code>) as well as a tangent vector
+to the discretized homoclinic solution (<code class="docutils literal notranslate"><span class="pre">hom_v</span></code>) as described in
+<a class="reference internal" href="Morris-Lecar.html#initial-prediction-homoclinic-orbit"><span class="std std-ref">Initial prediction of homoclinic orbit near Bogdanov-Takens point 1</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">opt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">contset</span><span class="p">;</span><span class="w"></span>
+<span class="n">opt</span><span class="p">.</span><span class="n">Singularities</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">opt</span><span class="p">.</span><span class="n">MaxNumPoints</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span><span class="w"></span>
+<span class="n">opt</span><span class="p">.</span><span class="n">MaxStepsize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">options</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="p">[</span><span class="n">hom_x</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w">  </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="n">homoclinic_br</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cont</span><span class="p">(@</span><span class="n">homoclinic</span><span class="p">,</span><span class="w"> </span><span class="n">hom_x</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v</span><span class="p">,</span><span class="w"> </span><span class="n">opt</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 2.664535e-15
+BT normal form coefficients:
+a=3.945309e-02,	 b=-5.253878e-02
+The initial perturbation parameter epsilon:  1.000000e-01
+The initial amplitude: 0.857576
+The initial half-return time T: 55.2395
+The initial distance eps0: 0.00153522
+The initial distance eps1: 0.000472271
+first point found
+tangent vector to first point found
+
+elapsed time  = 11.4 secs
+npoints curve = 300
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compare-predicted-with-computed-parameters">
+<h2>Compare predicted with computed parameters<a class="headerlink" href="#compare-predicted-with-computed-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have obtained a curve of homoclinic orbits (<code class="docutils literal notranslate"><span class="pre">homoclinic_br</span></code>) we
+compare the computed curve in parameter space with the predicted curve we
+construct below. To do so, we use the function <code class="docutils literal notranslate"><span class="pre">BT_nmfm_orbital</span></code> to obtain the
+parameter-dependent normal form coefficients and the coefficients between the
+parameters of the system and the parameters on the center manifold, see
+<span id="id4">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot --width 1024 --height 800</span><span class="w"></span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="k">global</span><span class="w"> </span><span class="n">homds</span><span class="w"></span>
+<span class="c">% plot computed parameter curve</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">     </span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">2</span><span class="p">,:));</span><span class="w"></span>
+<span class="c">% Bogdanov-Takens parameter-dependent normal form coefficients</span><span class="w"></span>
+<span class="n">bt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span><span class="w"></span>
+<span class="n">a</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="n">b</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">K10</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K10</span><span class="p">;</span><span class="w"></span>
+<span class="n">K01</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K01</span><span class="p">;</span><span class="w"></span>
+<span class="n">K02</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K02</span><span class="p">;</span><span class="w"></span>
+<span class="n">K11</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K11</span><span class="p">;</span><span class="w"></span>
+<span class="n">K03</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K03</span><span class="p">;</span><span class="w"></span>
+<span class="c">% construct predictor as in the paper</span><span class="w"></span>
+<span class="nb">eps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
+<span class="n">beta1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span>^<span class="mi">3</span><span class="o">/</span><span class="n">b</span>^<span class="mi">4</span><span class="o">*</span><span class="nb">eps</span><span class="o">.^</span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="n">tau0</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
+<span class="n">tau2</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">288</span><span class="o">/</span><span class="mi">2401</span><span class="p">;</span><span class="w"></span>
+<span class="n">beta2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">*</span><span class="p">(</span><span class="n">tau0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tau2</span><span class="o">*</span><span class="nb">eps</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="o">.*</span><span class="nb">eps</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="nb">alpha</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">K10</span><span class="o">.*</span><span class="n">beta1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">K01</span><span class="o">.*</span><span class="n">beta2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">K02</span><span class="o">.*</span><span class="n">beta2</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">K11</span><span class="o">.*</span><span class="n">beta1</span><span class="o">.*</span><span class="n">beta2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">K03</span><span class="o">.*</span><span class="n">beta2</span><span class="o">.^</span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="nb">alpha</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">par</span><span class="p">(</span><span class="n">ap</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">alpha</span><span class="p">;</span><span class="w"></span>
+<span class="c">% plot currect predictor</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="nb">alpha</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="nb">alpha</span><span class="p">(</span><span class="mi">2</span><span class="p">,:),</span><span class="w"> </span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="c">% plot Bogdanov-Takens point</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">bt</span><span class="p">.</span><span class="n">par</span><span class="p">(</span><span class="n">ind</span><span class="p">.</span><span class="n">alpha</span><span class="p">),</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">par</span><span class="p">(</span><span class="n">ind</span><span class="p">.</span><span class="n">delta</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.k&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="c">% set axis labels and legend</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$\alpha$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;Homoclinic curve&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Current homoclinic predictor&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">    </span><span class="s">&#39;Bogdanov-Takens point&#39;</span><span class="p">},</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SouthEast&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="c">%axis([1.1334    1.1658    0.6305    0.7339])</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Comparision between computed and predicted parameter curve.&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Bazykin_11_0.png" src="_images/Bazykin_11_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="bifurcation-diagram-in-phase-space-x-1-x-2">
+<h2>Bifurcation diagram in phase-space <span class="math notranslate nohighlight">\((x_1,x_2)\)</span><a class="headerlink" href="#bifurcation-diagram-in-phase-space-x-1-x-2" title="Permalink to this headline">¶</a></h2>
+<p>To obtain an impression of the  homoclinic solutions we plot the computed
+homoclinic orbits in <span class="math notranslate nohighlight">\((x,y)\)</span> phase-space.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">     </span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">     </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="w"> </span><span class="mf">0.4470</span><span class="w"> </span><span class="mf">0.7410</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;HandleVisibility&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Off&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$x_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$x_2$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">bt</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.k&#39;</span><span class="w"> </span><span class="p">,</span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Bogdanov-Takens point&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SouthEast&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Homoclic orbits in $(x_1,x_2)$-phase space&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Bazykin_13_0.png" src="_images/Bazykin_13_0.png" />
+</div>
+</div>
+<div class="section" id="predictors-of-orbits-for-various-epsilons">
+<h3>Predictors of orbits for various epsilons<a class="headerlink" href="#predictors-of-orbits-for-various-epsilons" title="Permalink to this headline">¶</a></h3>
+<p>Below we compute for a large range of amplitudes the predicted and corrected
+homoclinic solutions and compare them in phase space. We see that even with an
+amplitude of <code class="docutils literal notranslate"><span class="pre">2</span></code> the predicted homoclinic orbit is still very close.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">options</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="n">options</span><span class="p">.</span><span class="n">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="n">options</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="n">options</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0e-05</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">amplitudes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mf">1.0e-03</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="n">XPredicted</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">330</span><span class="p">,</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="n">XCorrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">330</span><span class="p">,</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amplitudes</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">[</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">XPredicted</span><span class="p">(:,</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x_pred</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">try</span><span class="w"></span>
+<span class="w">    </span><span class="n">XCorrected</span><span class="p">(:,</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">catch</span><span class="w"></span>
+<span class="w">    </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;Didn&#39;&#39;t convergence to homoclinic solution&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="n">cm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">lines</span><span class="p">;</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">XPredicted</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">     </span><span class="n">XPredicted</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">      </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="s">&#39;HandleVisibility&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Off&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">XCorrected</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">     </span><span class="n">XCorrected</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">      </span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:),</span><span class="w"> </span><span class="s">&#39;HandleVisibility&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Off&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">bt</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.k&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$x_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$x_2$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Bogdanov-Takens point&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Bazykin_15_0.png" src="_images/Bazykin_15_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="convergence-plot">
+<h2>Convergence plot<a class="headerlink" href="#convergence-plot" title="Permalink to this headline">¶</a></h2>
+<p>We finish this notebook with a log-log convergence plot comparing the different
+third order homoclinic approximation methods derived in <span id="id5">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>
+to approximate the homoclinic solutions near the first Bogdanov-Takens point.
+On the abscissa is the amplitude <span class="math notranslate nohighlight">\(A_0\)</span> and on the ordinate the relative error
+<span class="math notranslate nohighlight">\(\delta\)</span> between the constructed solution (<code class="docutils literal notranslate"><span class="pre">x_pred</span></code>) to the defining system for the
+homoclinic orbit and the Newton corrected solution (<code class="docutils literal notranslate"><span class="pre">x_corrected</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">BToptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e-05</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">amplitudes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="n">methodList</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;orbital&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LP&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;RegularPerturbation&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">    </span><span class="s">&#39;RegularPerturbationL2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LPHypernormalForm&#39;</span><span class="p">};</span><span class="w"></span>
+<span class="n">relativeErrors</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">methodList</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">methodList</span><span class="p">{</span><span class="nb">i</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amplitudes</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="n">x_corrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="o">-</span><span class="n">x_pred</span><span class="p">)</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">catch</span><span class="w"></span>
+<span class="w">        </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;Did not converge.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">continue</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="n">cm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">lines</span><span class="p">();</span><span class="w"></span>
+<span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">5</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="n">methodList</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bazykin model&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">4</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">5</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Bazykin_17_0.png" src="_images/Bazykin_17_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "matlab"
+        },
+        kernelOptions: {
+            kernelName: "matlab",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'matlab'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="BazykinGenSym.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Generate system files for the Bazykin’s predator-prey system</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="IFOCGenSym.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Generate system files for the indirect field oriented control system</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Maikel Bosschaert<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

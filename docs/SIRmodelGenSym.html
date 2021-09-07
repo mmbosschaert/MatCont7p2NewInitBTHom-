@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate system files for SIR model with the standard incidence rate &#8212; Initialization of homoclinic orbits near Bogdanov-Takens points</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SIR model" href="SIRmodel.html" />
+    <link rel="prev" title="The extended Lorenz-84 model" href="extendedLorenz84model.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Initialization of homoclinic orbits near Bogdanov-Takens points</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Morris-Lecar
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-LecarGenSym.html">
+   Generate system files for Morris-Lecar in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-Lecar.html">
+   Morris-Lecar Model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  CO-oxidation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidationGenSym.html">
+   Generate system files for CO-oxidation in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidation.html">
+   CO-oxidation in a platinum model.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predator Prey
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPreyGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPrey.html">
+   Predator-prey system with constant harvesting rate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bazykin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BazykinGenSym.html">
+   Generate system files for the Bazykin’s predator-prey system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Bazykin.html">
+   Bazykin’s predator-prey ecosystem
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  IFOC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOCGenSym.html">
+   Generate system files for the indirect field oriented control system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOC.html">
+   Indirect field oriented control system
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Extended Lorenz 84
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lorenz84GenSym.html">
+   Generate system files for the extended Lorenz-84 model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extendedLorenz84model.html">
+   The extended Lorenz-84 model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  SIR model
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Generate system files for SIR model with the standard incidence rate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodel.html">
+   SIR model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hodgkin-Huxley
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxleyGenSym.html">
+   Generate system files for Hodgkin-Huxley equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxley.html">
+   Hodgkin Huxley equations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Homoclinic RG flows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflowsGenSym.html">
+   Generate system files for Homoclinic RG flows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflows.html">
+   Homoclinic RG flows
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bogdanov-Takens
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakensNormalFormGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakens.html">
+   Bogdanov-Takens normal form
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/SIRmodelGenSym.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSIRmodelGenSym.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/SIRmodelGenSym.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-matcont-path-and-load-sym-package-if-gnu-octave-is-used">
+   Add MatCont path and load sym package if GNU Octave is used
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-the-system-name">
+   Set the system name
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-coordinates-and-parameter-names-as-strings">
+   Create coordinates and parameter names as strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-symbols-for-coordinates-and-parameters">
+   Create symbols for coordinates and parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-fixed-parameters">
+   Define fixed parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-the-system">
+   Define the system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentiate-and-generate-code-directional-derivatives">
+   Differentiate and generate code (directional derivatives)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#higher-order-parameter-dependent-multi-linear-form">
+   Higher-order parameter-dependent multi-linear form.
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="generate-system-files-for-sir-model-with-the-standard-incidence-rate">
+<h1>Generate system files for SIR model with the standard incidence rate<a class="headerlink" href="#generate-system-files-for-sir-model-with-the-standard-incidence-rate" title="Permalink to this headline">¶</a></h1>
+<p>This Jupyter Notebook generates the <strong>system file</strong> for the following SIR model
+<span id="id1">[<a class="reference internal" href="references.html#id20">SZ14</a>]</span> with the standard incidence rate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+\begin{aligned}
+    \frac{d S}{d t} &amp;=A-d S-\frac{\beta S I}{S+I+R}, \\ 
+    \frac{d I}{d t} &amp;=-(d+\nu) I-\mu(b,I) I+\frac{\beta S I}{S+I+R}, \\ 
+    \frac{d R}{d t} &amp;=\mu(b,I) I-d R,
+\end{aligned}
+\end{cases}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A&gt;0\)</span> is the recruitment rate of susceptible population;
+<span class="math notranslate nohighlight">\(d&gt;0\)</span> is the per capita natural death rate of the population; <span class="math notranslate nohighlight">\(\nu&gt;0\)</span> is
+the per capita disease-induced death rate; <span class="math notranslate nohighlight">\(\mu&gt;0\)</span> is the per capita
+recovery rate of infectious individual. The funtion <span class="math notranslate nohighlight">\(\mu\)</span> is set to</p>
+<div class="math notranslate nohighlight">
+\[
+\mu(b,I) = \mu_0 + (\mu_1 - \mu_0) \frac{b}{I+b}.
+\]</div>
+<p>These are used in the <a class="reference internal" href="SIRmodel.html"><span class="doc std std-doc">SIR model</span></a> demo.</p>
+<div class="section" id="add-matcont-path-and-load-sym-package-if-gnu-octave-is-used">
+<h2>Add MatCont path and load sym package if GNU Octave is used<a class="headerlink" href="#add-matcont-path-and-load-sym-package-if-gnu-octave-is-used" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matcontpath</span> <span class="o">=</span> <span class="s1">&#39;../&#39;</span><span class="p">;</span>
+<span class="n">addpath</span><span class="p">(</span><span class="n">matcontpath</span><span class="p">);</span>
+<span class="n">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span> <span class="s1">&#39;/Utilities&#39;</span><span class="p">]);</span>
+<span class="k">if</span> <span class="n">isOctave</span>
+  <span class="n">pkg</span> <span class="n">load</span> <span class="n">symbolic</span> <span class="o">%</span> <span class="k">for</span> <span class="n">GNU</span> <span class="n">Octave</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-the-system-name">
+<h2>Set the system name<a class="headerlink" href="#set-the-system-name" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system_name</span> <span class="o">=</span> <span class="s1">&#39;SIRmodel&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-coordinates-and-parameter-names-as-strings">
+<h2>Create coordinates and parameter names as strings<a class="headerlink" href="#create-coordinates-and-parameter-names-as-strings" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coordsnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">};</span>
+<span class="n">parnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mu1&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-symbols-for-coordinates-and-parameters">
+<h2>Create symbols for coordinates and parameters<a class="headerlink" href="#create-symbols-for-coordinates-and-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The array <code class="docutils literal notranslate"><span class="pre">par</span></code> is the array of symbols in the same order as parnames.
+Due to the following two lines we may, for example, use either <code class="docutils literal notranslate"><span class="pre">mu1</span></code> or
+<code class="docutils literal notranslate"><span class="pre">par(1)</span></code>. There should no changes be need of this code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="p">(</span><span class="n">parnames</span><span class="p">{:});</span>       <span class="o">%</span> <span class="n">create</span> <span class="n">symbol</span> <span class="k">for</span> <span class="n">alpha</span> <span class="ow">and</span> <span class="n">delta</span>
+<span class="n">par</span><span class="o">=</span><span class="n">cell2sym</span><span class="p">(</span><span class="n">parnames</span><span class="p">);</span>  <span class="o">%</span> <span class="n">now</span> <span class="n">alpha1</span> <span class="ow">is</span> <span class="n">par</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">etc</span>
+<span class="n">syms</span><span class="p">(</span><span class="n">coordsnames</span><span class="p">{:});</span>    <span class="o">%</span> <span class="n">create</span> <span class="n">symbol</span> <span class="k">for</span> <span class="n">alpha</span> <span class="ow">and</span> <span class="n">delta</span>
+<span class="n">coords</span><span class="o">=</span><span class="n">cell2sym</span><span class="p">(</span><span class="n">coordsnames</span><span class="p">);</span> <span class="o">%</span> <span class="n">create</span> <span class="mi">1</span> <span class="n">x</span> <span class="n">n</span> <span class="n">vector</span> <span class="k">for</span> <span class="n">coordinates</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-fixed-parameters">
+<h2>Define fixed parameters<a class="headerlink" href="#define-fixed-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="n">mu0</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+<span class="n">nu</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-the-system">
+<h2>Define the system<a class="headerlink" href="#define-the-system" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="o">@</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">I</span><span class="p">)</span> <span class="n">mu0</span> <span class="o">+</span> <span class="p">(</span><span class="n">mu1</span><span class="o">-</span><span class="n">mu0</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+<span class="n">dS_dt</span> <span class="o">=</span> <span class="n">A</span><span class="o">-</span><span class="n">d</span><span class="o">*</span><span class="n">S</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">S</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="p">(</span><span class="n">S</span><span class="o">+</span><span class="n">I</span><span class="o">+</span><span class="n">R</span><span class="p">);</span>
+<span class="n">dI_dt</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">d</span><span class="o">+</span><span class="n">nu</span><span class="p">)</span><span class="o">*</span><span class="n">I</span><span class="o">-</span><span class="n">mu</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">I</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="n">S</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="p">(</span><span class="n">S</span><span class="o">+</span><span class="n">I</span><span class="o">+</span><span class="n">R</span><span class="p">);</span>
+<span class="n">dR_dt</span> <span class="o">=</span> <span class="n">mu</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">I</span><span class="o">-</span><span class="n">d</span><span class="o">*</span><span class="n">R</span><span class="p">;</span>
+<span class="n">system</span> <span class="o">=</span> <span class="p">[</span><span class="n">dS_dt</span><span class="p">;</span> <span class="n">dI_dt</span><span class="p">;</span> <span class="n">dR_dt</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In general there are no modifications needed after this line.</p>
+</div>
+<div class="section" id="differentiate-and-generate-code-directional-derivatives">
+<h2>Differentiate and generate code (directional derivatives)<a class="headerlink" href="#differentiate-and-generate-code-directional-derivatives" title="Permalink to this headline">¶</a></h2>
+<p>Exporting it to <code class="docutils literal notranslate"><span class="pre">&lt;system_name&gt;.m</span></code>. This method uses directional derivatives.
+Then using polarization identities derivatives can be calculated in arbitrary
+direction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">suc</span> <span class="o">=</span> <span class="n">generate_directional_derivatives</span><span class="p">(</span><span class="o">...</span>
+  <span class="n">system</span><span class="p">,</span><span class="o">...</span>   <span class="o">%</span> <span class="n">n</span> <span class="n">x</span> <span class="mi">1</span> <span class="n">array</span> <span class="n">of</span> <span class="n">derivative</span> <span class="n">symbolic</span> <span class="n">expressions</span>
+  <span class="n">coords</span><span class="p">,</span><span class="o">...</span> <span class="o">%</span> <span class="mi">1</span> <span class="n">x</span> <span class="n">n</span> <span class="n">array</span> <span class="n">of</span> <span class="n">symbols</span> <span class="k">for</span> <span class="n">states</span>
+  <span class="n">par</span><span class="p">,</span><span class="o">...</span>      <span class="o">%</span> <span class="mi">1</span> <span class="n">x</span> <span class="n">np</span> <span class="n">array</span> <span class="n">of</span> <span class="n">symbols</span> <span class="n">used</span> <span class="k">for</span> <span class="n">parameters</span>
+  <span class="n">system_name</span><span class="p">,</span><span class="o">...</span> <span class="o">%</span> <span class="n">argument</span> <span class="n">specifying</span> <span class="n">the</span> <span class="n">system</span> <span class="n">name</span>
+  <span class="p">[</span><span class="n">matcontpath</span><span class="p">,</span> <span class="s1">&#39;Systems/&#39;</span><span class="p">]</span><span class="o">...</span> <span class="o">%</span> <span class="n">directory</span> <span class="n">to</span> <span class="n">save</span> <span class="n">to</span> <span class="n">file</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="higher-order-parameter-dependent-multi-linear-form">
+<h2>Higher-order parameter-dependent multi-linear form.<a class="headerlink" href="#higher-order-parameter-dependent-multi-linear-form" title="Permalink to this headline">¶</a></h2>
+<p>Exporting it to <code class="docutils literal notranslate"><span class="pre">&lt;system_name&gt;_multilinearforms.m</span></code>. These multi-linear forms are
+currently only used in the computation of the parameter-dependent center
+manifold for the codimension two Bogdanov-Takens bifurcation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">order</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">suc</span> <span class="o">=</span> <span class="n">generate_multilinear_forms</span><span class="p">(</span><span class="n">system_name</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">par</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="o">...</span>
+        <span class="p">[</span><span class="n">matcontpath</span><span class="p">,</span> <span class="s1">&#39;Systems/&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "matlab"
+        },
+        kernelOptions: {
+            kernelName: "matlab",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'matlab'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="extendedLorenz84model.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">The extended Lorenz-84 model</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="SIRmodel.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">SIR model</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Maikel Bosschaert<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
