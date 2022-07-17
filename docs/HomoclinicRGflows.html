@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+   Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
   </a>
  </li>
 </ul>
@@ -376,114 +376,126 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Homoclinic RG flows
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-matcont">
-   Load MatCont
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-the-odefile">
-   Set the odefile
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-equilibrium">
-   Define equilibrium
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continue-equilibrium-in-parameter-n">
-   Continue equilibrium in parameter
-   <span class="math notranslate nohighlight">
-    \(N\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup-hopf-point">
-   Setup Hopf point
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continue-hopf-point-in-parameters-m-and-n">
-   Continue Hopf point in parameters
-   <span class="math notranslate nohighlight">
-    \(M\)
-   </span>
-   and
-   <span class="math notranslate nohighlight">
-    \(N\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-prediction-of-homoclinic-orbit-near-bogdanov-takens-point-1">
-   Initial prediction of homoclinic orbit near Bogdanov-Takens point 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#correct-initial-prediction-of-homoclinic-orbit-near-bt1-with-newton">
-   Correct initial prediction of homoclinic orbit near bt1 with Newton
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compare-profiles-of-predicted-and-corrected-solution-bt1">
-   Compare profiles of predicted and corrected solution (bt1)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compare-predictor-and-corrected-solution-in-g-1-g-2-phase-space">
-   Compare predictor and corrected solution in
-   <span class="math notranslate nohighlight">
-    \((g_1, g_2)\)
-   </span>
-   phase-space
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continue-homoclinic-curve-emanating-from-the-first-bogdanov-takens-point">
-   Continue homoclinic curve emanating from the first Bogdanov-Takens point
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compare-predicted-with-computed-parameters-emanating-from-bt1">
-   Compare predicted with computed parameters emanating from bt1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bifurcation-diagram-in-g-1-g-2-g-3-phase-space">
-   Bifurcation diagram in
-   <span class="math notranslate nohighlight">
-    \((g_1,g_2,g_3)\)
-   </span>
-   phase-space
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#predictors-of-orbits-for-various-epsilons">
-     Predictors of orbits for various epsilons
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview">
+     Overview
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-matcont">
+     Load MatCont
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-the-odefile">
+     Set the odefile
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-equilibrium">
+     Define equilibrium
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continue-equilibrium-in-parameter-n">
+     Continue equilibrium in parameter
+     <span class="math notranslate nohighlight">
+      \(N\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup-hopf-point">
+     Setup Hopf point
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continue-hopf-point-in-parameters-m-and-n">
+     Continue Hopf point in parameters
+     <span class="math notranslate nohighlight">
+      \(M\)
+     </span>
+     and
+     <span class="math notranslate nohighlight">
+      \(N\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-prediction-of-homoclinic-orbit-near-bogdanov-takens-point-1">
+     Initial prediction of homoclinic orbit near Bogdanov-Takens point 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correct-initial-prediction-of-homoclinic-orbit-near-bt1-with-newton">
+     Correct initial prediction of homoclinic orbit near bt1 with Newton
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-profiles-of-predicted-and-corrected-solution-bt1">
+     Compare profiles of predicted and corrected solution (bt1)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-predictor-and-corrected-solution-in-g-1-g-2-phase-space">
+     Compare predictor and corrected solution in
+     <span class="math notranslate nohighlight">
+      \((g_1, g_2)\)
+     </span>
+     phase-space
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continue-homoclinic-curve-emanating-from-the-first-bogdanov-takens-point">
+     Continue homoclinic curve emanating from the first Bogdanov-Takens point
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-predicted-with-computed-parameters-emanating-from-bt1">
+     Compare predicted with computed parameters emanating from bt1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bifurcation-diagram-in-g-1-g-2-g-3-phase-space">
+     Bifurcation diagram in
+     <span class="math notranslate nohighlight">
+      \((g_1,g_2,g_3)\)
+     </span>
+     phase-space
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#predictors-of-orbits-for-various-epsilons">
+       Predictors of orbits for various epsilons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continue-limit-points-emanating-from-the-bogdanov-takens-point">
+     Continue limit points emanating from the Bogdanov-Takens point
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bifurcation-plot">
+     Bifurcation plot
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convergence-plot">
+     Convergence plot
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continue-limit-points-emanating-from-the-bogdanov-takens-point">
-   Continue limit points emanating from the Bogdanov-Takens point
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bifurcation-plot">
-   Bifurcation plot
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#convergence-plot">
-   Convergence plot
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-data-to-files">
+   Save data to files
   </a>
  </li>
 </ul>
@@ -788,7 +800,7 @@ a=-2.872173e-01
 Neutral saddle
 label = H , x = ( 0.648955 0.299168 -0.444774 -0.280762 -1.007194 )
 
-elapsed time  = 0.8 secs
+elapsed time  = 1.2 secs
 npoints curve = 300
 </pre></div>
 </div>
@@ -882,7 +894,7 @@ label = BT, x = ( -0.132423 0.106649 0.089399 -0.248054 0.942195 4.593759 -0.000
 label = HH, x = ( -0.410202 0.398065 0.256144 -0.441341 0.950248 4.384951 -0.038318 )
 Neutral saddle ?
 
-elapsed time  = 0.4 secs
+elapsed time  = 0.5 secs
 npoints curve = 50
 </pre></div>
 </div>
@@ -1029,13 +1041,13 @@ the mesh on which the homoclinic orbit is computed we need the global variable
 <span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="s">&#39;predicted&#39;</span><span class="p">})</span><span class="w"></span>
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$g_2$&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">subplot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">x1_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="w"></span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homoclinic1_pred</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">x1_orbit</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homoclinic1_pred</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="s">&#39;predicted&#39;</span><span class="p">})</span><span class="w"></span>
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$g_3$&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">subplot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">x1_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="w"></span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homoclinic1_pred</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">x1_orbit</span><span class="p">(</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homoclinic1_pred</span><span class="p">(</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="s">&#39;predicted&#39;</span><span class="p">})</span><span class="w"></span>
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$g_4$&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&#39;predicted&#39;</span><span class="p">})</span><span class="w"></span>
@@ -1086,7 +1098,7 @@ Bogdanov-Takens point, we can start continuation using the function <code class=
 tangent vector to first point found
 Inclination-flip with respect to the unstable manifold, parameters = 0.32798 and 4.04374.
 
-elapsed time  = 6.9 secs
+elapsed time  = 8.1 secs
 npoints curve = 50
 </pre></div>
 </div>
@@ -1186,8 +1198,8 @@ singularities detected on the homoclinic branch.</p>
 remaining three Bogdanov-Takens points we show that the estimate of the
 amplitude is very conservative. Below we compute for a large range of
 amplitudes the predicted and corrected homoclinic solutions and compare them in
-phase space. We see that for amplitudes up to <code class="docutils literal notranslate"><span class="pre">1.0e-01</span></code> the predicted
-homoclinic orbits are very close.</p>
+phase space. We see that for amplitudes up to <code class="docutils literal notranslate"><span class="pre">1.0e-02</span></code> the predicted
+homoclinic orbits are indistinguishable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">options</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
@@ -1195,7 +1207,7 @@ homoclinic orbits are very close.</p>
 <span class="n">options</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
 <span class="n">options</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0e-05</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">amplitudes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mf">1.0e-03</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0e-01</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="n">amplitudes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mf">1.0e-03</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0e-02</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
 <span class="n">XPredicted</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">660</span><span class="p">,</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
 <span class="n">XCorrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">660</span><span class="p">,</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
@@ -1209,22 +1221,100 @@ homoclinic orbits are very close.</p>
 <span class="w">  </span><span class="k">end</span><span class="w"></span>
 <span class="k">end</span><span class="w"></span>
 
-<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
-<span class="nb">plot3</span><span class="p">(</span><span class="n">XPredicted</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">     </span><span class="n">XPredicted</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">     </span><span class="n">XPredicted</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:))</span><span class="w"></span>
-<span class="nb">plot3</span><span class="p">(</span><span class="n">XCorrected</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">     </span><span class="n">XCorrected</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">     </span><span class="n">XCorrected</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">coords</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="n">homds</span><span class="p">.</span><span class="n">nphase</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">      </span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:))</span><span class="w"></span>
-<span class="nb">plot3</span><span class="p">(</span><span class="n">bt1</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$g_1$&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$g_2$&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;$g_3$&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">plot3</span><span class="p">(</span><span class="n">bt1</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.k&#39;</span><span class="w"> </span><span class="p">,</span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="nb">clf</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="w"></span>
+<span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nb">cos</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="nb">sin</span><span class="p">(</span><span class="nb">alpha</span><span class="p">);</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)];</span><span class="w"></span>
+<span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="n">s</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="s">1]</span><span class="p">;</span><span class="w"></span>
+<span class="n">parsCorrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">XCorrected</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="o">.*</span><span class="nb">ones</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">tps</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">parsCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;.&#39;</span><span class="p">,</span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:))</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XPredicted</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">parsCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:))</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$M$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_2$&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
-<span class="nb">view</span><span class="p">(</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="nb">view</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">alpha0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1.139</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="n">alpha0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="n">alpha0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">,:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">parsCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;.&#39;</span><span class="p">,</span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:))</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XPredicted</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="n">alpha0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="n">alpha0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">,:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">parsCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:))</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$M$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_3$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_4$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="nb">view</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="w"></span>
+<span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nb">cos</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="nb">sin</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="s">0</span><span class="w"> </span><span class="s">1]</span><span class="p">;</span><span class="w"></span>
+<span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="n">s</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="s">1</span><span class="w"> </span><span class="s">0</span><span class="p">;</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="s">0</span><span class="w"> </span><span class="s">1]</span><span class="p">;</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">3</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;.&#39;</span><span class="p">,</span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:))</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XPredicted</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">3</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:))</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_2$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;$g_3$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="nb">view</span><span class="p">(</span><span class="mi">332</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XCorrected</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">3</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;.&#39;</span><span class="p">,</span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:))</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">[</span><span class="nb">profile</span><span class="p">,</span><span class="w"> </span><span class="n">saddle</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">XPredicted</span><span class="p">(:,</span><span class="nb">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">profile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="nb">profile</span><span class="p">,</span><span class="mi">4</span><span class="p">,[]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">profileRotated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="mf">1.2181</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">profile</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],:)</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="n">saddle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">saddle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]));</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot3</span><span class="p">(</span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">profileRotated</span><span class="p">(</span><span class="mi">3</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:))</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\tilde g_2$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;$g_4$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="nb">view</span><span class="p">(</span><span class="mi">332</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1359,28 +1449,32 @@ homoclinic orbit and the Newton corrected solution (<code class="docutils litera
 <span class="w">    </span><span class="s">&#39;RegularPerturbationL2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LPHypernormalForm&#39;</span><span class="p">};</span><span class="w"></span>
 <span class="n">relativeErrors</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">methodList</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">methodList</span><span class="p">{</span><span class="nb">i</span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amplitudes</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">[</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt1</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">try</span><span class="w"></span>
-<span class="w">        </span><span class="n">x_corrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="o">-</span><span class="n">x_pred</span><span class="p">)</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">catch</span><span class="w"></span>
-<span class="w">        </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;Did not converge.&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">continue</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">o</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="w"></span>
+<span class="w">        </span><span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">methodList</span><span class="p">{</span><span class="nb">i</span><span class="p">};</span><span class="w"></span>
+<span class="w">        </span><span class="n">BToptions</span><span class="p">.</span><span class="n">order</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">o</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors</span><span class="p">{</span><span class="n">o</span><span class="p">,</span><span class="nb">i</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amplitudes</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">[</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt1</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">try</span><span class="w"></span>
+<span class="w">                </span><span class="n">x_corrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">relativeErrors</span><span class="p">{</span><span class="n">o</span><span class="p">,</span><span class="nb">i</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="o">-</span><span class="n">x_pred</span><span class="p">)</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">catch</span><span class="w"></span>
+<span class="w">                </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;Did not converge.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">continue</span><span class="w"></span>
+<span class="w">            </span><span class="k">end</span><span class="w"></span>
+<span class="w">        </span><span class="k">end</span><span class="w"></span>
 <span class="w">    </span><span class="k">end</span><span class="w"></span>
-<span class="w">  </span><span class="k">end</span><span class="w"></span>
 <span class="k">end</span><span class="w"></span>
 
-<span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">5</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">cm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">lines</span><span class="p">();</span><span class="w"></span>
+<span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">legend</span><span class="p">(</span><span class="n">methodList</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Homoclinic RG flows convergence&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Hodgkin-Huxley equations&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
@@ -1397,9 +1491,45 @@ Warning: Did not converge.
 Warning: Did not converge.
 Warning: Did not converge.
 Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
+Warning: Did not converge.
 </pre></div>
 </div>
 <img alt="_images/HomoclinicRGflows_40_1.png" src="_images/HomoclinicRGflows_40_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="save-data-to-files">
+<h1>Save data to files<a class="headerlink" href="#save-data-to-files" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsRPorder1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsRPorder2.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsRPorder3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                                   </span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsLPorder1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsLPorder2.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsLPorder3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsLPorder3orbital.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsRegularPerturbationL2.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/HomRGflowsLPHypernormalForm.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
 </div>
 </div>
 </div>

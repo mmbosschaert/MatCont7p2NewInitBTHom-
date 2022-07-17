@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+   Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
   </a>
  </li>
 </ul>
@@ -595,7 +595,7 @@ parameters of the system and the parameters on the center manifold, see
 <span class="nb">plot</span><span class="p">(</span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
 <span class="w">     </span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">2</span><span class="p">,:));</span><span class="w"></span>
 <span class="c">% Bogdanov-Takens parameter-dependent normal form coefficients</span><span class="w"></span>
-<span class="n">bt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span><span class="w"></span>
+<span class="n">bt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
 <span class="n">a</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
 <span class="n">b</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 <span class="n">K10</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K10</span><span class="p">;</span><span class="w"></span>
@@ -604,7 +604,7 @@ parameters of the system and the parameters on the center manifold, see
 <span class="n">K11</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K11</span><span class="p">;</span><span class="w"></span>
 <span class="n">K03</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K03</span><span class="p">;</span><span class="w"></span>
 <span class="c">% construct predictor as in the paper</span><span class="w"></span>
-<span class="nb">eps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
+<span class="nb">eps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p">);</span><span class="w"></span>
 <span class="n">beta1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span>^<span class="mi">3</span><span class="o">/</span><span class="n">b</span>^<span class="mi">4</span><span class="o">*</span><span class="nb">eps</span><span class="o">.^</span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
 <span class="n">tau0</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">/</span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
 <span class="n">tau2</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">288</span><span class="o">/</span><span class="mi">2401</span><span class="p">;</span><span class="w"></span>

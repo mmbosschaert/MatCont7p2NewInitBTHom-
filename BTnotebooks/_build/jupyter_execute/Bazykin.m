@@ -38,7 +38,7 @@ global homds
 plot(homoclinic_br(homds.PeriodIdx+1,:), ...
      homoclinic_br(homds.PeriodIdx+2,:));
 % Bogdanov-Takens parameter-dependent normal form coefficients
-bt = BT_nmfm(odefile, bt, ap);
+bt = BT_nmfm_orbital(odefile, bt, ap, BToptions);
 a   = bt.nmfm.a;
 b   = bt.nmfm.b;
 K10 = bt.nmfm.K10;
@@ -47,7 +47,7 @@ K02 = bt.nmfm.K02;
 K11 = bt.nmfm.K11;
 K03 = bt.nmfm.K03;
 % construct predictor as in the paper
-eps = linspace(0, 0.2);
+eps = linspace(0, 0.4);
 beta1 = -4*a^3/b^4*eps.^4;
 tau0  = 10/7;
 tau2  = 288/2401;

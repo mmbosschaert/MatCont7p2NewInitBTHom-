@@ -6,8 +6,8 @@ mv ../intro.md ./
 mv ../references.md ./
 
 # jupyter-book build --all ./
-jupyter-book build ./
-# jupyter-book build --builder latex ./
+# jupyter-book build ./
+jupyter-book build --builder latex ./
 # jupyter-book build --builder pdfhtml ./
 
 mv ../*.md ./

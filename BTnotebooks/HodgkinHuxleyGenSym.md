@@ -7,7 +7,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.10.3
+      jupytext_version: 1.14.0
   kernelspec:
     display_name: Matlab
     language: matlab
@@ -79,7 +79,7 @@ $$
 
 The values of $\bar{V}_{\mathrm{Na}}$ and $\bar{V}_{\mathrm{K}}$ can be
 controlled experimentally {cite}`HodgkinHuxley@1952a`.
-The temperature is set to $T=6.3^{\circ}.
+The temperature is set to $T=6.3^{\circ}$.
 
 These are used in the [HodgkinHuxley](HodgkinHuxley.ipynb).
 

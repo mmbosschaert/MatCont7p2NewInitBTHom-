@@ -1,6 +1,5 @@
 clear all
-matcontpath = '../../';
-restoredefaultpath
+matcontpath = '../';
 addpath(matcontpath)
 addpath([matcontpath, 'Systems'])
 addpath([matcontpath, 'Equilibrium'])

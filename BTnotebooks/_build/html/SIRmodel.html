@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+   Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
   </a>
  </li>
 </ul>
@@ -647,7 +647,7 @@ First Lyapunov coefficient = 3.908102e-04
 label = LP, x = ( 198.069839 0.016933 1.743895 0.033419 )
 a=-2.413445e+00
 
-elapsed time  = 1.3 secs
+elapsed time  = 0.7 secs
 npoints curve = 1000
 </pre></div>
 </div>
@@ -707,13 +707,13 @@ continuation options as defined above in the <strong>struct</strong> <code class
 tangent vector to first point found
 label = GH, x = ( 195.599878 0.039046 3.970613 10.427886 0.025488 0.012691 )
 l2=-8.624030e-05
-Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.029338e-17.
+Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.423059e-17.
 &gt; In nf_H (line 27)
 In hopf&gt;testf (line 150)
 In cont&gt;EvalTestFunc (line 810)
 In cont (line 506)
 
-Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.511917e-18.
+Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.847349e-18.
 &gt; In nf_H (line 28)
 In hopf&gt;testf (line 150)
 In cont&gt;EvalTestFunc (line 810)
@@ -722,7 +722,7 @@ In cont (line 506)
 label = BT, x = ( 198.059382 0.017026 1.753334 10.450822 0.033239 0.000000 )
 (a,b)=(-1.298117e-03, 1.219168e-02)
 
-elapsed time  = 2.1 secs
+elapsed time  = 1.3 secs
 npoints curve = 500
 </pre></div>
 </div>
@@ -750,17 +750,18 @@ to the discretized homoclinic solution (<code class="docutils literal notranslat
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 7.460699e-13
+BT normal form coefficients:
 a=-1.298117e-03,	 b=1.219168e-02
 The initial perturbation parameter epsilon:  1.000000e-01
 The initial amplitude: 0.524008
 The initial half-return time T: 358.423
-The initial distance time eps0: 0.00239581
-The initial distance time eps1: 0.000941365
+The initial distance eps0: 0.00239581
+The initial distance eps1: 0.000941365
 first point found
 tangent vector to first point found
 
-elapsed time  = 27.3 secs
+elapsed time  = 18.7 secs
 npoints curve = 300
 </pre></div>
 </div>
@@ -785,7 +786,7 @@ Figure 4 in <span id="id6">[<a class="reference internal" href="references.html#
 <span class="nb">plot</span><span class="p">(</span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
 <span class="w">     </span><span class="n">homoclinic_br</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">2</span><span class="p">,:));</span><span class="w"></span>
 <span class="c">% Bogdanov-Takens parameter-dependent smooth orbital normal form coefficients</span><span class="w"></span>
-<span class="n">bt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span><span class="w"></span>
+<span class="n">bt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
 <span class="n">a</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
 <span class="n">b</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 <span class="n">K10</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K10</span><span class="p">;</span><span class="w"></span>
@@ -817,7 +818,10 @@ Figure 4 in <span id="id6">[<a class="reference internal" href="references.html#
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/SIRmodel_27_0.png" src="_images/SIRmodel_27_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 7.460699e-13
+</pre></div>
+</div>
+<img alt="_images/SIRmodel_27_1.png" src="_images/SIRmodel_27_1.png" />
 </div>
 </div>
 </div>

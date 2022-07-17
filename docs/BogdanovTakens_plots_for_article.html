@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bogdanov-Takens normal form &#8212; Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Morris-Lecar
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-LecarGenSym.html">
+   Generate system files for Morris-Lecar in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Morris-Lecar.html">
+   Morris-Lecar Model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  CO-oxidation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidationGenSym.html">
+   Generate system files for CO-oxidation in a platinum model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CO-oxidation.html">
+   CO-oxidation in a platinum model.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predator Prey
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPreyGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PredatorPrey.html">
+   Predator-prey system with constant harvesting rate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bazykin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BazykinGenSym.html">
+   Generate system files for the Bazykin’s predator-prey system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Bazykin.html">
+   Bazykin’s predator-prey ecosystem
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  IFOC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOCGenSym.html">
+   Generate system files for the indirect field oriented control system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IFOC.html">
+   Indirect field oriented control system
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Extended Lorenz 84
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lorenz84GenSym.html">
+   Generate system files for the extended Lorenz-84 model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extendedLorenz84model.html">
+   The extended Lorenz-84 model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  SIR model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodelGenSym.html">
+   Generate system files for SIR model with the standard incidence rate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SIRmodel.html">
+   SIR model
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hodgkin-Huxley
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxleyGenSym.html">
+   Generate system files for Hodgkin-Huxley equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HodgkinHuxley.html">
+   Hodgkin Huxley equations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Homoclinic RG flows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflowsGenSym.html">
+   Generate system files for Homoclinic RG flows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HomoclinicRGflows.html">
+   Homoclinic RG flows
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bogdanov-Takens
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakensNormalFormGenSym.html">
+   Generate system files for predator-prey system with constant rate harvesting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BogdanovTakens.html">
+   Bogdanov-Takens normal form
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/BogdanovTakens_plots_for_article.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/mmbosschaert/BTRevisited"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/mmbosschaert/BTRevisited/issues/new?title=Issue%20on%20page%20%2FBogdanovTakens_plots_for_article.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mmbosschaert/BTRevisited/master?urlpath=tree/docs/BogdanovTakens_plots_for_article.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bogdanov-Takens normal form
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview">
+     Overview
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-matcont">
+     Load MatCont
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-the-odefile">
+     Set the odefile
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-bogdanov-takens-point">
+     Define Bogdanov-Takens point
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lindstedt-poincare-with-and-without-higher-order-time-approximation">
+     Lindstedt-Poincaré with and without higher order time approximation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-predictor-and-corrected-solution-in-w-0-w-1-phase-space">
+     Compare predictor and corrected solution in
+     <span class="math notranslate nohighlight">
+      \((w_0, w_1)\)
+     </span>
+     phase-space
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convergence-plots">
+     Convergence plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compare-rpm-with-different-phase-conditions">
+   Compare RPM with different phase conditions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#w0-component">
+     w0 component
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#w1-component">
+     w1 component
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rpm-vs-lp-2016-vs-lp">
+     RPM vs LP 2016 vs LP
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       w0 component
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       w1 component
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lp-vs-lp-with-different-phase-condition">
+     LP vs LP with different phase condition
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       w0 component
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       w1 component
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-data-to-files">
+   Save data to files
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bogdanov-takens-normal-form">
+<h1>Bogdanov-Takens normal form<a class="headerlink" href="#bogdanov-takens-normal-form" title="Permalink to this headline">¶</a></h1>
+<p>The universal unfolding for the Bogdanov-Takens normal form is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-bogdanovtakensnormalform">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-bogdanovtakensnormalform" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+\begin{aligned}
+\dot w_0 &amp;= w_1, \\
+\dot w_1 &amp;= \beta_1  + \beta_2 w_1 + w_0^2 - w_0 w_1. \\
+\end{aligned}
+\end{cases}\end{split}\]</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In this demo we will</p>
+<ul class="simple">
+<li><p>Compare the profiles of the predicted homoclinic solutions emanating from the
+Bogdanov-Takens point with the corrected homoclinic solutions curve in
+phase-space. We will do this using the asymptotics derived in
+<span id="id1">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span> and the asymptotics as provided in
+<span id="id2">[<a class="reference internal" href="references.html#id2">AHGKM16</a>]</span>. We will focus on the difference in using the higher
+order approximation of the non-linear time transformation.</p></li>
+<li><p>Create a convergence plot of the different approximation
+derived in <span id="id3">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>. And compare them with the approximation
+derived in <span id="id4">[<a class="reference internal" href="references.html#id2">AHGKM16</a>]</span>.</p></li>
+</ul>
+<p>This demo will not show how to continue the homoclinic curve emanating from the
+codimension two Bogdanov-Takens point. For this we refer to one of the other
+demos.</p>
+</div>
+<div class="section" id="load-matcont">
+<h2>Load MatCont<a class="headerlink" href="#load-matcont" title="Permalink to this headline">¶</a></h2>
+<p>Before we can start using <strong>MatCont</strong> we need to add the main directory of
+<strong>MatCont,</strong> as well as various subdirectories of <strong>MatCont,</strong> to the <em>MATLAB
+search path</em>. This is done in the code below. The variable <code class="docutils literal notranslate"><span class="pre">matcont_home</span></code>
+should point to the main directory of <strong>MatCont.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
+<span class="n">matcontpath</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;../&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">(</span><span class="n">matcontpath</span><span class="p">)</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Systems&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Equilibrium&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LimitPoint&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LimitPointCycle&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Hopf&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Homoclinic&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LimitCycle&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Continuer&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MultilinearForms&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Utilities&#39;</span><span class="p">])</span><span class="w"></span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">groot</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;defaultTextInterpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LaTeX&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nb">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s">&#39;defaultAxesFontSize&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-the-odefile">
+<h2>Set the odefile<a class="headerlink" href="#set-the-odefile" title="Permalink to this headline">¶</a></h2>
+<p>Next we set the variable <code class="docutils literal notranslate"><span class="pre">odefile</span></code> to the <em>system file</em> previously generated by
+the notebook <a class="reference internal" href="BogdanovTakensNormalFormGenSym.html"><span class="doc std std-doc">Generate system files for predator-prey system with constant rate harvesting</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">odefile</span><span class="p">=@</span><span class="n">BogdanovTakensNormalForm</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-bogdanov-takens-point">
+<h2>Define Bogdanov-Takens point<a class="headerlink" href="#define-bogdanov-takens-point" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">w1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">beta1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">beta2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">bt</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">w0</span><span class="p">;</span><span class="w"> </span><span class="n">w1</span><span class="p">];</span><span class="w"></span>
+<span class="n">bt</span><span class="p">.</span><span class="n">par</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">beta1</span><span class="p">;</span><span class="w"> </span><span class="n">beta2</span><span class="p">];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To refer to the parameters throughout the script we create a <strong>cell array</strong> of
+strings containing the parameter names. This is then converted into a
+<strong>struct</strong>. This allows us to refer to the parameters as <code class="docutils literal notranslate"><span class="pre">ind.parametername</span></code>,
+similar as done in <em>DDE-BifTool</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">parnames</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;beta1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;beta2&#39;</span><span class="p">};</span><span class="w"></span>
+<span class="n">cind</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">parnames</span><span class="p">;</span><span class="nb">num2cell</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">parnames</span><span class="p">))];</span><span class="w"></span>
+<span class="n">ind</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nb">struct</span><span class="p">(</span><span class="n">cind</span><span class="p">{:});</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lindstedt-poincare-with-and-without-higher-order-time-approximation">
+<h2>Lindstedt-Poincaré with and without higher order time approximation<a class="headerlink" href="#lindstedt-poincare-with-and-without-higher-order-time-approximation" title="Permalink to this headline">¶</a></h2>
+<p>Here we will show that it is essential to use the higher order approximation of
+the non-linear time transformation as derived in <span id="id5">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>. This
+was not taken into account in <span id="id6">[<a class="reference internal" href="references.html#id2">AHGKM16</a>]</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot --width 1024 --height 800</span><span class="w"></span>
+<span class="n">ap</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">ind</span><span class="p">.</span><span class="n">beta1</span><span class="p">,</span><span class="w"> </span><span class="n">ind</span><span class="p">.</span><span class="n">beta2</span><span class="p">];</span><span class="w"></span>
+<span class="n">BToptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;LP&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">HigherOrderTimeReparametrization</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0e-03</span><span class="p">;</span><span class="w"></span>
+<span class="n">hom2016pred</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w">  </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="n">homcorrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">hom2016pred</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v_pred</span><span class="p">);</span><span class="w"></span>
+<span class="k">global</span><span class="w"> </span><span class="n">homds</span><span class="w"></span>
+<span class="p">[</span><span class="n">hom2016predOrbit</span><span class="p">,</span><span class="w"> </span><span class="n">saddle2016pred</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">hom2016pred</span><span class="p">);</span><span class="w"></span>
+<span class="p">[</span><span class="n">homcorrectedOrbit</span><span class="p">,</span><span class="w"> </span><span class="n">saddlecorrected</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">homcorrected</span><span class="p">);</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Profiles of the predicted and correction homolinic orbits.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">finemsh</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">hom2016predOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted 2016&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">hom2016predOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted 2016&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$t$&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">% write data to file</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w0CorrectedLPWithoutTimeInversion3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">hom2016predOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w0PredictorLPWithoutTimeInversion3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w1CorrectedLPWithoutTimeInversion3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">hom2016predOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w1PredictorLPWithoutTimeInversion3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+a=-1,	 b=1
+T: 5.04286
+The initial perturbation parameter:  1
+The initial distance eps0: 0.00144308
+The initial distance eps1: 0.00485318
+</pre></div>
+</div>
+<img alt="_images/BogdanovTakens_plots_for_article_9_1.png" src="_images/BogdanovTakens_plots_for_article_9_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot --width 1024 --height 800</span><span class="w"></span>
+<span class="n">ap</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">ind</span><span class="p">.</span><span class="n">beta1</span><span class="p">,</span><span class="w"> </span><span class="n">ind</span><span class="p">.</span><span class="n">beta2</span><span class="p">];</span><span class="w"></span>
+<span class="n">BToptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;RegularPerturbation&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0e-03</span><span class="p">;</span><span class="w"></span>
+<span class="p">[</span><span class="n">homRPpred</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v_pred</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w">  </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="n">homRPcorrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">homRPpred</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v_pred</span><span class="p">);</span><span class="w"></span>
+<span class="k">global</span><span class="w"> </span><span class="n">homds</span><span class="w"></span>
+<span class="p">[</span><span class="n">homRPpredOrbit</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">homRPpred</span><span class="p">);</span><span class="w"></span>
+<span class="p">[</span><span class="n">homRPcorrectedOrbit</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">homRPcorrected</span><span class="p">);</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Profiles of the predicted and correction homolinic orbits.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">finemsh</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homRPcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homRPpredOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted RP&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homRPcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homRPpredOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted RP&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$t$&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">% write data to file</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homRPcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w0CorrectedRP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homRPpredOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w0PredictorRP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homRPcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w1CorrectedRP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homRPpredOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w1PredictorRP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+a=-1,	 b=1
+The initial perturbation parameter:  1
+The initial amplitude: 6
+T: 5.04286
+The initial distance eps0: 0.12692
+The initial distance eps1: 0.0355175
+</pre></div>
+</div>
+<img alt="_images/BogdanovTakens_plots_for_article_10_1.png" src="_images/BogdanovTakens_plots_for_article_10_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot --width 1024 --height 800</span><span class="w"></span>
+<span class="n">ap</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">ind</span><span class="p">.</span><span class="n">beta1</span><span class="p">,</span><span class="w"> </span><span class="n">ind</span><span class="p">.</span><span class="n">beta2</span><span class="p">];</span><span class="w"></span>
+<span class="n">BToptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;LP&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0e-03</span><span class="p">;</span><span class="w"></span>
+<span class="p">[</span><span class="n">hom2021pred</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v_pred</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w">  </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="n">homcorrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">hom2021pred</span><span class="p">,</span><span class="w"> </span><span class="n">hom_v_pred</span><span class="p">);</span><span class="w"></span>
+<span class="k">global</span><span class="w"> </span><span class="n">homds</span><span class="w"></span>
+<span class="p">[</span><span class="n">hom2021predOrbit</span><span class="p">,</span><span class="w"> </span><span class="n">saddle2021pred</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">hom2021pred</span><span class="p">);</span><span class="w"></span>
+<span class="p">[</span><span class="n">homcorrectedOrbit</span><span class="p">,</span><span class="w"> </span><span class="n">saddlecorrected</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">homcorrected</span><span class="p">);</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Profiles of the predicted and correction homolinic orbits.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">finemsh</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">homds</span><span class="p">.</span><span class="n">finemsh</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">hom2021predOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted 2021&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">finemsh</span><span class="p">,</span><span class="w"> </span><span class="n">hom2021predOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted 2021&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$t$&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">% write data to file</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w0CorrectedLP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">hom2021predOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w0PredictorLP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w1CorrectedLP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">finemsh</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">hom2021predOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;../../data/w1PredictorLP3.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+a=-1,	 b=1
+T: 5.04286
+The initial perturbation parameter:  1
+The initial distance eps0: 0.112165
+The initial distance eps1: 4.58758e-08
+</pre></div>
+</div>
+<img alt="_images/BogdanovTakens_plots_for_article_11_1.png" src="_images/BogdanovTakens_plots_for_article_11_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="compare-predictor-and-corrected-solution-in-w-0-w-1-phase-space">
+<h2>Compare predictor and corrected solution in <span class="math notranslate nohighlight">\((w_0, w_1)\)</span> phase-space<a class="headerlink" href="#compare-predictor-and-corrected-solution-in-w-0-w-1-phase-space" title="Permalink to this headline">¶</a></h2>
+<p>The plot below shows that both predicted homoclinic orbits are in excellent
+agreement in <span class="math notranslate nohighlight">\((w_0, w_1)\)</span> phase-space. However, this is not on which the Newton
+iteration operates. It operates on the profiles as shown above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="n">homcorrectedOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;-&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">hom2016predOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="n">hom2016predOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;--&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">hom2021predOrbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="n">hom2021predOrbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">),</span><span class="s">&#39;x&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">saddlecorrected</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">saddlecorrected</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;.&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="w"> </span><span class="mf">0.4470</span><span class="w"> </span><span class="mf">0.7410</span><span class="p">])</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$w_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$w_1$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">({</span><span class="s">&#39;corrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted 2016&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;predicted 2021&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Corrected saddle point&#39;</span><span class="p">})</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Orbits and saddle points of predicted and corrected in phase-space&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_13_0.png" src="_images/BogdanovTakens_plots_for_article_13_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="convergence-plots">
+<h2>Convergence plots<a class="headerlink" href="#convergence-plots" title="Permalink to this headline">¶</a></h2>
+<p>Below we show a log-log convergence plot comparing the different
+higher order homoclinic approximation methods derived in <span id="id7">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>
+to approximate the homoclinic solutions near the Bogdanov-Takens point.
+On the abscissa is the amplitude <span class="math notranslate nohighlight">\(A_0\)</span> and on the ordinate the relative error
+<span class="math notranslate nohighlight">\(\delta\)</span> between the constructed solution (<code class="docutils literal notranslate"><span class="pre">x_pred</span></code>) to the defining system for the
+homoclinic orbit and the Newton corrected solution (<code class="docutils literal notranslate"><span class="pre">x_corrected</span></code>).
+We will also plot the third order predictor as derived in
+<span id="id8">[<a class="reference internal" href="references.html#id2">AHGKM16</a>]</span>. It is shown that it only provides zeroth-order
+accuracy.</p>
+<p>We finish this notebook with a convergence plot as above. This time we show
+that the <span class="math notranslate nohighlight">\(L2\)</span> phase-condition provides better accuracy then  the phase-condition
+used in <span id="id9">[<a class="reference internal" href="references.html#id2">AHGKM16</a>]</span>. However, as stated in <span id="id10">[<a class="reference internal" href="references.html#id3">Kuz21</a>]</span>
+these results do not lift to the central manifold of a general system.</p>
+<p>Also shown is that the Lindstedt-Poincaré method provides a much better
+approximation here then either one of the regular perturbation methods.
+This however doens’t hold true for the first order correction.</p>
+</div>
+</div>
+<div class="section" id="compare-rpm-with-different-phase-conditions">
+<h1>Compare RPM with different phase conditions<a class="headerlink" href="#compare-rpm-with-different-phase-conditions" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">BToptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_Hom_set_options</span><span class="p">();</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">TTolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e-05</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">correct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">amplitudes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">logspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w"></span>
+<span class="n">methodList</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;RegularPerturbation&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;RegularPerturbationL2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LP&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;orbitalv2&#39;</span><span class="p">};</span><span class="w"></span>
+
+<span class="n">relativeErrors</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="n">relativeErrors_w0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="n">relativeErrors_w1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">methodList</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">BToptions</span><span class="p">.</span><span class="n">order</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">methodList</span><span class="p">{</span><span class="n">k</span><span class="p">};</span><span class="w"> </span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amplitudes</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">[</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">try</span><span class="w"></span>
+<span class="w">                </span><span class="n">x_corrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="o">-</span><span class="n">x_pred</span><span class="p">)</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">[</span><span class="n">hom_corrected_orbit</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">[</span><span class="n">hompred_orbit</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">hompred_orbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">));</span><span class="w"></span>
+<span class="w">                </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">hompred_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">));</span><span class="w"></span>
+<span class="w">            </span><span class="k">catch</span><span class="w"></span>
+<span class="w">                </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;Did not converge.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">continue</span><span class="w"></span>
+<span class="w">            </span><span class="k">end</span><span class="w"></span>
+<span class="w">        </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">k</span><span class="p">=</span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">));</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">HigherOrderTimeReparametrization</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">BToptions</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;LP&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">BToptions</span><span class="p">.</span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amplitudes</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">init_BT_Hom</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="n">x_corrected</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">newtcorr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span><span class="w"> </span><span class="n">v0</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors</span><span class="p">{</span><span class="nb">i</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="o">-</span><span class="n">x_pred</span><span class="p">)</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="n">hom_corrected_orbit</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">x_corrected</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="n">hompred_orbit</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt_rearr</span><span class="p">(</span><span class="n">x_pred</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">hompred_orbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">}(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">hompred_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">))</span><span class="o">/</span><span class="nb">norm</span><span class="p">(</span><span class="n">hom_corrected_orbit</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">catch</span><span class="w"></span>
+<span class="w">        </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;Did not converge.&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">continue</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_17_0.png" src="_images/BogdanovTakens_plots_for_article_17_0.png" />
+</div>
+</div>
+<div class="section" id="w0-component">
+<h2>w0 component<a class="headerlink" href="#w0-component" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">lines</span><span class="p">();</span><span class="w"></span>
+<span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Regular Perturbation order 0&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 1&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation L2 phase condition order 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation L2 phase condition order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation L2 phase condition order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bogdanov Takens normal form homoclinic convergence plot&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="nb">gray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                 </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_19_0.png" src="_images/BogdanovTakens_plots_for_article_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="w1-component">
+<h2>w1 component<a class="headerlink" href="#w1-component" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Regular Perturbation order 0&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 1&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation L2 phase condition order 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation L2 phase condition order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation L2 phase condition order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bogdanov Takens normal form homoclinic convergence plot&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="nb">gray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                 </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_21_0.png" src="_images/BogdanovTakens_plots_for_article_21_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="rpm-vs-lp-2016-vs-lp">
+<h2>RPM vs LP 2016 vs LP<a class="headerlink" href="#rpm-vs-lp-2016-vs-lp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>w0 component<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;-&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Regular Perturbation order 0&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 1&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP 2016 order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP order 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bogdanov Takens normal form homoclinic convergence plot&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="nb">gray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">gray</span><span class="p">;</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">4</span><span class="p">,:);</span><span class="w"></span>
+<span class="w">                 </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_23_0.png" src="_images/BogdanovTakens_plots_for_article_23_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>w1 component<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;-&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Regular Perturbation order 0&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 1&#39;</span><span class="p">,</span><span class="s">&#39;Regular Perturbation order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Regular Perturbation order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP 2016 order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP order 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LP order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bogdanov Takens normal form homoclinic convergence plot&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="nb">gray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">gray</span><span class="p">;</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">4</span><span class="p">,:);</span><span class="w"></span>
+<span class="w">                 </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_25_0.png" src="_images/BogdanovTakens_plots_for_article_25_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lp-vs-lp-with-different-phase-condition">
+<h2>LP vs LP with different phase condition<a class="headerlink" href="#lp-vs-lp-with-different-phase-condition" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>w0 component<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;LP order 1&#39;</span><span class="p">,</span><span class="s">&#39;LP order 2&#39;</span><span class="p">,</span><span class="s">&#39;LP order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LPgamma order 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LPgamma order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LPgamma order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bogdanov Takens normal form homoclinic convergence plot&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="nb">gray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"></span>
+<span class="w">                 </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_27_0.png" src="_images/BogdanovTakens_plots_for_article_27_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>w1 component<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">loglog</span><span class="p">(</span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;+&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">       </span><span class="n">amplitudes</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:),</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;LP order 1&#39;</span><span class="p">,</span><span class="s">&#39;LP order 2&#39;</span><span class="p">,</span><span class="s">&#39;LP order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LPgamma order 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LPgamma order 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;LPgamma order 3&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NorthWest&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Bogdanov Takens normal form homoclinic convergence plot&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;$A_0$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;$\delta(X)$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span><span class="w"></span>
+<span class="nb">gray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="mf">0.8</span><span class="p">];</span><span class="w"></span>
+<span class="n">ax</span><span class="p">.</span><span class="n">ColorOrder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">3</span><span class="p">,:);</span><span class="w"></span>
+<span class="w">                 </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:);</span><span class="w"> </span><span class="n">cm</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/BogdanovTakens_plots_for_article_29_0.png" src="_images/BogdanovTakens_plots_for_article_29_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="save-data-to-files">
+<h1>Save data to files<a class="headerlink" href="#save-data-to-files" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder0w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder1w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder2w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder3w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                                   </span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPL2PhaseConditionCorrectedorder1w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPL2PhaseConditionCorrectedorder2w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPL2PhaseConditionCorrectedorder3w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                                   </span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder0w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder1w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder2w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPorder3w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                                   </span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPL2PhaseConditionCorrectedorder1w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPL2PhaseConditionCorrectedorder2w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/RPL2PhaseConditionCorrectedorder3w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">}(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="o">&#39;</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;../../data/LPWithoutTimeInversionorder3w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/orbitalorder1w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/orbitalorder2w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/orbitalorder3w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">}(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="k">end</span><span class="p">)</span><span class="o">&#39;</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;../../data/LPWithoutTimeInversionorder3w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/orbitalorder1w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/orbitalorder2w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/orbitalorder3w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/L2PhaseConditionorder1w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/L2PhaseConditionorder2w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w0</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/L2PhaseConditionorder3w0.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/L2PhaseConditionorder1w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/L2PhaseConditionorder2w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">writematrix</span><span class="p">([</span><span class="n">amplitudes</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">relativeErrors_w1</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">}(:)],</span><span class="w"> </span><span class="s">&#39;../../data/L2PhaseConditionorder3w1.csv&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "matlab"
+        },
+        kernelOptions: {
+            kernelName: "matlab",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'matlab'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Maikel Bosschaert<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

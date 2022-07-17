@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+   Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
   </a>
  </li>
 </ul>
@@ -581,17 +581,18 @@ to the discretized homoclinic solution (<code class="docutils literal notranslat
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 1.887379e-15
+BT normal form coefficients:
 a=2.144234e-01,	 b=6.065146e-01
 The initial perturbation parameter epsilon:  1.000000e-01
 The initial amplitude: 0.0349736
 The initial half-return time T: 116.985
-The initial distance time eps0: 1.96422e-05
-The initial distance time eps1: 6.35711e-05
+The initial distance eps0: 1.96422e-05
+The initial distance eps1: 6.35711e-05
 first point found
 tangent vector to first point found
 Current step size too small (point 43)
-elapsed time  = 5.7 secs
+elapsed time  = 2.5 secs
 npoints curve = 43
 </pre></div>
 </div>
@@ -616,7 +617,7 @@ of the smooth orbital normal form on the center manifold, see
 <span class="nb">plot</span><span class="p">(</span><span class="n">homoclinic_br1</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
 <span class="w">     </span><span class="n">homoclinic_br1</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">2</span><span class="p">,:));</span><span class="w"></span>
 <span class="c">% Bogdanov-Takens parameter-dependent normal form coefficients</span><span class="w"></span>
-<span class="n">bt1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt1</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span><span class="w"></span>
+<span class="n">bt1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt1</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
 <span class="n">a</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
 <span class="n">b</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 <span class="n">K10</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K10</span><span class="p">;</span><span class="w"></span>
@@ -647,7 +648,10 @@ of the smooth orbital normal form on the center manifold, see
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/extendedLorenz84model_11_0.png" src="_images/extendedLorenz84model_11_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 1.887379e-15
+</pre></div>
+</div>
+<img alt="_images/extendedLorenz84model_11_1.png" src="_images/extendedLorenz84model_11_1.png" />
 </div>
 </div>
 </div>

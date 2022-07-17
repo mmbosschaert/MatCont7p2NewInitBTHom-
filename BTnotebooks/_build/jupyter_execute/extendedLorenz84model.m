@@ -43,7 +43,7 @@ global homds
 plot(homoclinic_br1(homds.PeriodIdx+1,:), ...
      homoclinic_br1(homds.PeriodIdx+2,:));
 % Bogdanov-Takens parameter-dependent normal form coefficients
-bt1 = BT_nmfm_orbital(odefile, bt1, ap);
+bt1 = BT_nmfm_orbital(odefile, bt1, ap, BToptions);
 a   = bt1.nmfm.a;
 b   = bt1.nmfm.b;
 K10 = bt1.nmfm.K10;
@@ -160,3 +160,5 @@ xlabel('$A_0$')
 ylabel('$\delta(X)$')
 ax = gca;
 ax.ColorOrder = [cm(1,:); [0.8 0.8 0.8]; cm(2,:); cm(4,:); cm(5,:)];
+
+

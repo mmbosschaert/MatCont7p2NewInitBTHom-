@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Homoclinic Predictors for Bogdanov-Takens Bifurcation points in ODEs
+   Interplay between normal forms and center manifold reduction for homoclinic predictors near Bogdanov-Takens bifurcation
   </a>
  </li>
 </ul>
@@ -550,8 +550,7 @@ should point to the main directory of <strong>MatCont.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
-<span class="nb">restoredefaultpath</span><span class="w"></span>
-<span class="n">matcontpath</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;../../&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">matcontpath</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;../&#39;</span><span class="p">;</span><span class="w"></span>
 <span class="nb">addpath</span><span class="p">(</span><span class="n">matcontpath</span><span class="p">)</span><span class="w"></span>
 <span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Equilibrium&#39;</span><span class="p">])</span><span class="w"></span>
 <span class="nb">addpath</span><span class="p">([</span><span class="n">matcontpath</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Systems&#39;</span><span class="p">])</span><span class="w"></span>
@@ -652,7 +651,7 @@ a=-2.384097e+01
 label = H , x = ( 0.916533 -0.174248 0.128858 -12.529060 )
 First Lyapunov coefficient = -2.462095e+00
 
-elapsed time  = 0.7 secs
+elapsed time  = 0.3 secs
 npoints curve = 300
 </pre></div>
 </div>
@@ -736,7 +735,7 @@ c=3.627887e-01
 label = BT, x = ( 0.115909 0.315467 0.288437 1.417628 0.971398 )
 (a,b)=(-8.378444e-02, -2.136280e+00)
 
-elapsed time  = 1.1 secs
+elapsed time  = 0.4 secs
 npoints curve = 300
 </pre></div>
 </div>
@@ -817,13 +816,14 @@ approximation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 5.023537e-11
+BT normal form coefficients:
 a=-4.822565e-02,	 b=-1.937633e+00
 The initial perturbation parameter epsilon:  1.000000e-01
 The initial amplitude: 0.000770702
 The initial half-return time T: 1661.8
-The initial distance time eps0: 4.36004e-07
-The initial distance time eps1: 1.41437e-06
+The initial distance eps0: 4.36004e-07
+The initial distance eps1: 1.41437e-06
 </pre></div>
 </div>
 </div>
@@ -925,7 +925,7 @@ the maximum number of continuation steps.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first point found
 tangent vector to first point found
 
-elapsed time  = 30.0 secs
+elapsed time  = 13.6 secs
 npoints curve = 300
 </pre></div>
 </div>
@@ -947,7 +947,7 @@ parameters of the system and the parameters on the center manifold, see
 <span class="nb">plot</span><span class="p">(</span><span class="n">homoclinic_br1</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">1</span><span class="p">,:),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
 <span class="w">     </span><span class="n">homoclinic_br1</span><span class="p">(</span><span class="n">homds</span><span class="p">.</span><span class="n">PeriodIdx</span><span class="o">+</span><span class="mi">2</span><span class="p">,:));</span><span class="w"></span>
 <span class="c">% Bogdanov-Takens parameter-dependent normal form coefficients</span><span class="w"></span>
-<span class="n">bt1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt1</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span><span class="w"></span>
+<span class="n">bt1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BT_nmfm_orbital</span><span class="p">(</span><span class="n">odefile</span><span class="p">,</span><span class="w"> </span><span class="n">bt1</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">BToptions</span><span class="p">);</span><span class="w"></span>
 <span class="n">a</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
 <span class="n">b</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 <span class="n">K10</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bt1</span><span class="p">.</span><span class="n">nmfm</span><span class="p">.</span><span class="n">K10</span><span class="p">;</span><span class="w"></span>
@@ -978,7 +978,10 @@ parameters of the system and the parameters on the center manifold, see
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/CO-oxidation_29_0.png" src="_images/CO-oxidation_29_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 5.023537e-11
+</pre></div>
+</div>
+<img alt="_images/CO-oxidation_29_1.png" src="_images/CO-oxidation_29_1.png" />
 </div>
 </div>
 </div>
@@ -1029,17 +1032,18 @@ reduce the computational cost.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BT normal form coefficients:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Center manifold coefficients&#39; accuracy: 2.761569e-11
+BT normal form coefficients:
 a=-8.378444e-02,	 b=-2.136280e+00
 The initial perturbation parameter epsilon:  1.000000e-01
 The initial amplitude: 0.00110154
 The initial half-return time T: 1052.82
-The initial distance time eps0: 6.38083e-07
-The initial distance time eps1: 2.06064e-06
+The initial distance eps0: 6.38083e-07
+The initial distance eps1: 2.06064e-06
 first point found
 tangent vector to first point found
 
-elapsed time  = 26.4 secs
+elapsed time  = 11.2 secs
 npoints curve = 300
 </pre></div>
 </div>
@@ -1095,7 +1099,7 @@ label = GH, x = ( 0.018022 0.368238 0.497968 0.891319 0.232487 0.003324 )
 l2=-7.769003e+02
 Closed curve detected at step 1241
 
-elapsed time  = 3.6 secs
+elapsed time  = 1.3 secs
 npoints curve = 1241
 </pre></div>
 </div>

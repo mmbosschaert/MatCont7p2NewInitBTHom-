@@ -95,13 +95,13 @@ plot(homds.finemsh, homoclinic1_pred(2:4:end),'.')
 legend({'corrected','predicted'})
 ylabel('$g_2$')
 subplot(4,1,3); hold on;
-plot(homds.finemsh, x1_orbit(2:4:end))
-plot(homds.finemsh, homoclinic1_pred(2:4:end),'.')
+plot(homds.finemsh, x1_orbit(3:4:end))
+plot(homds.finemsh, homoclinic1_pred(3:4:end),'.')
 legend({'corrected','predicted'})
 ylabel('$g_3$')
 subplot(4,1,4); hold on;
-plot(homds.finemsh, x1_orbit(2:4:end))
-plot(homds.finemsh, homoclinic1_pred(2:4:end),'.')
+plot(homds.finemsh, x1_orbit(4:4:end))
+plot(homds.finemsh, homoclinic1_pred(4:4:end),'.')
 legend({'corrected','predicted'})
 ylabel('$g_4$')
 legend({'corrected',  'predicted'})
@@ -177,7 +177,7 @@ options.messages = false;
 options.correct = false;
 options.TTolerance = 1.0e-05;
 
-amplitudes = linspace(1.0e-03, 2.0e-01, 10);
+amplitudes = linspace(1.0e-03, 5.0e-02, 10);
 XPredicted = zeros(660,length(amplitudes));
 XCorrected = zeros(660,length(amplitudes));
 for j=1:length(amplitudes)
@@ -191,22 +191,100 @@ for j=1:length(amplitudes)
   end
 end
 
-hold on
-plot3(XPredicted(homds.coords(1:homds.nphase:end),1:end), ...
-     XPredicted(homds.coords(2:homds.nphase:end),1:end), ...
-     XPredicted(homds.coords(3:homds.nphase:end),1:end), ...
-      'color', cm(1,:))
-plot3(XCorrected(homds.coords(1:homds.nphase:end),1:end), ...
-     XCorrected(homds.coords(2:homds.nphase:end),1:end), ...
-     XCorrected(homds.coords(3:homds.nphase:end),1:end), ...
-      '--', 'color', cm(2,:))
-plot3(bt1.x(1), bt1.x(2), bt1.x(3), '.', 'MarkerSize', 16)
-xlabel('$g_1$')
-ylabel('$g_2$')
-zlabel('$g_3$')
-plot3(bt1.x(1), bt1.x(2), bt1.x(3), '.k' ,'MarkerSize', 20)
+clf
+subplot(2,2,1); hold on
+R = @(alpha) [cos(alpha) -sin(alpha); sin(alpha) cos(alpha)];
+S = @(s) [s 0; 0 1];
+parsCorrected = XCorrected(homds.PeriodIdx+1,1:end).*ones(homds.tps,10);
+for i=1:length(amplitudes)
+    [profile, saddle] = bt_rearr(XCorrected(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-1.2181)*(S(100)*R(1.2181)*(profile(1:2,:) ...
+                        - saddle(1:2)) + saddle(1:2));
+    plot3(parsCorrected(:,i),profileRotated(1,:)', profileRotated(2,:)', ...
+          '.','color', cm(1,:))
+
+    [profile, saddle] = bt_rearr(XPredicted(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-1.2181)*(S(100)*R(1.2181)*(profile(1:2,:) ...
+                        - saddle(1:2)) + saddle(1:2));
+    plot3(parsCorrected(:,i),profileRotated(1,:)', profileRotated(2,:)', ...
+          'color', cm(2,:))
+end
+xlabel('$M$')
+ylabel('$\tilde g_1$')
+zlabel('$\tilde g_2$')
 grid on
-view(-250, 16)
+view(32,15)
+
+subplot(2,2,2); hold on
+for i=1:length(amplitudes)
+    alpha0 = -1.139;
+    [profile, saddle] = bt_rearr(XCorrected(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-alpha0)*(S(100)*R(alpha0)*(profile(3:4,:) ...
+                        - saddle(3:4)) + saddle(3:4));
+    plot3(parsCorrected(:,i),profileRotated(1,:)', profileRotated(2,:)', ...
+          '.','color', cm(1,:))
+
+    [profile, saddle] = bt_rearr(XPredicted(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-alpha0)*(S(100)*R(alpha0)*(profile(3:4,:) ...
+                        - saddle(3:4)) + saddle(3:4));
+    plot3(parsCorrected(:,i),profileRotated(1,:)', profileRotated(2,:)', ...
+          'color', cm(2,:))
+end
+xlabel('$M$')
+ylabel('$\tilde g_3$')
+zlabel('$\tilde g_4$')
+grid on
+view(28,15)
+
+subplot(2,2,3); hold on
+R = @(alpha) [cos(alpha) -sin(alpha) 0; sin(alpha) cos(alpha) 0; 0 0 1];
+S = @(s) [s 0 0; 0 1 0; 0 0 1];
+for i=1:length(amplitudes)
+    [profile, saddle] = bt_rearr(XCorrected(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-1.2181)*(S(200)*R(1.2181)*(profile(1:3,:) ...
+                        - saddle(1:3)) + saddle(1:3));
+    plot3(profileRotated(1,:)', profileRotated(2,:)', profileRotated(3,:)', ...
+          '.','color', cm(1,:))
+
+    [profile, saddle] = bt_rearr(XPredicted(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-1.2181)*(S(200)*R(1.2181)*(profile(1:3,:) ...
+                        - saddle(1:3)) + saddle(1:3));
+    plot3(profileRotated(1,:)', profileRotated(2,:)', profileRotated(3,:)', ...
+          'color', cm(2,:))
+end
+xlabel('$\tilde g_1$')
+ylabel('$\tilde g_2$')
+zlabel('$g_3$')
+grid on
+view(332,11)
+
+subplot(2,2,4); hold on
+for i=1:length(amplitudes)
+    [profile, saddle] = bt_rearr(XCorrected(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-1.2181)*(S(200)*R(1.2181)*(profile([1,2,4],:) ...
+                        - saddle([1,2,4])) + saddle([1,2,4]));
+    plot3(profileRotated(1,:)', profileRotated(2,:)', profileRotated(3,:)', ...
+          '.','color', cm(1,:))
+
+    [profile, saddle] = bt_rearr(XPredicted(:,i));
+    profile = reshape(profile,4,[]);
+    profileRotated = R(-1.2181)*(S(200)*R(1.2181)*(profile([1,2,4],:) ...
+                        - saddle([1,2,4])) + saddle([1,2,4]));
+    plot3(profileRotated(1,:)', profileRotated(2,:)', profileRotated(3,:)', ...
+          'color', cm(2,:))
+end
+xlabel('$\tilde g_1$')
+ylabel('$\tilde g_2$')
+zlabel('$g_4$')
+grid on
+view(332,11)
 
 [lp1_x, lp1_v] = init_BT_LP(odefile, bt1.x, bt1.par, ap);
 [lp_br, ~, lp_br1_bif] = cont(@limitpoint, lp1_x, lp1_v, opt);
@@ -243,31 +321,47 @@ methodList = {'orbital', 'LP', 'RegularPerturbation', ...
     'RegularPerturbationL2', 'LPHypernormalForm'};
 relativeErrors = {};
 for i=1:length(methodList)
-    BToptions.method = methodList{i};
-    relativeErrors{i} = zeros(size(amplitudes));
-    for j=1:length(amplitudes)
-    BToptions.amplitude = amplitudes(j);
-    [x_pred, v0] = init_BT_Hom(odefile, bt1, ap, BToptions);
-    try
-        x_corrected = newtcorr(x_pred, v0);
-        relativeErrors{i}(j) = norm(x_corrected-x_pred)/norm(x_corrected);
-    catch
-        warning('Did not converge.')
-        continue
+    for o=1:3
+        BToptions.method = methodList{i};
+        BToptions.order = o;
+        relativeErrors{o,i} = zeros(size(amplitudes));
+        for j=1:length(amplitudes)
+            BToptions.amplitude = amplitudes(j);
+            [x_pred, v0] = init_BT_Hom(odefile, bt1, ap, BToptions);
+            try
+                x_corrected = newtcorr(x_pred, v0);
+                relativeErrors{o,i}(j) = norm(x_corrected-x_pred)/norm(x_corrected);
+            catch
+                warning('Did not converge.')
+                continue
+            end
+        end
     end
-  end
 end
 
-loglog(amplitudes, relativeErrors{1}(:), 'd', ...
-       amplitudes, relativeErrors{2}(:), '--', ...
-       amplitudes, relativeErrors{3}(:), '*', ...
-       amplitudes, relativeErrors{4}(:), 's', ...
-       amplitudes, relativeErrors{5}(:), '+')
+cm = lines();
+loglog(amplitudes, relativeErrors{3,1}(:), 'd', ...
+       amplitudes, relativeErrors{3,2}(:), '--', ...
+       amplitudes, relativeErrors{3,3}(:), '*', ...
+       amplitudes, relativeErrors{3,4}(:), 's', ...
+       amplitudes, relativeErrors{3,5}(:), '+')
 legend(methodList, 'Location', 'NorthWest')
-title('Homoclinic RG flows convergence')
+title('Hodgkin-Huxley equations')
 xlabel('$A_0$')
 ylabel('$\delta(X)$')
 ax = gca;
 ax.ColorOrder = [cm(1,:); [0.8 0.8 0.8]; cm(2,:); cm(4,:); cm(5,:)];
+
+writematrix([amplitudes', relativeErrors{1,3}(:)], '../../data/HomRGflowsRPorder1.csv', 'Delimiter', ' ')
+writematrix([amplitudes', relativeErrors{2,3}(:)], '../../data/HomRGflowsRPorder2.csv', 'Delimiter', ' ')
+writematrix([amplitudes', relativeErrors{3,3}(:)], '../../data/HomRGflowsRPorder3.csv', 'Delimiter', ' ')
+                                                   
+writematrix([amplitudes', relativeErrors{1,2}(:)], '../../data/HomRGflowsLPorder1.csv', 'Delimiter', ' ')
+writematrix([amplitudes', relativeErrors{2,2}(:)], '../../data/HomRGflowsLPorder2.csv', 'Delimiter', ' ')
+writematrix([amplitudes', relativeErrors{3,2}(:)], '../../data/HomRGflowsLPorder3.csv', 'Delimiter', ' ')
+
+writematrix([amplitudes', relativeErrors{3,1}(:)], '../../data/HomRGflowsLPorder3orbital.csv', 'Delimiter', ' ')
+writematrix([amplitudes', relativeErrors{3,4}(:)], '../../data/HomRGflowsRegularPerturbationL2.csv', 'Delimiter', ' ')
+writematrix([amplitudes', relativeErrors{3,5}(:)], '../../data/HomRGflowsLPHypernormalForm.csv', 'Delimiter', ' ')
 
 

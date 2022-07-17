@@ -5,8 +5,8 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.8.0
+      format_version: '1.3'
+      jupytext_version: 1.14.0
   kernelspec:
     display_name: Matlab
     language: matlab
@@ -54,8 +54,7 @@ should point to the main directory of __MatCont.__
 
 ```matlab
 clear all
-matcontpath = '../../';
-restoredefaultpath
+matcontpath = '../';
 addpath(matcontpath)
 addpath([matcontpath, 'Systems'])
 addpath([matcontpath, 'Equilibrium'])

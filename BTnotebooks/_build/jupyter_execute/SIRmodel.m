@@ -94,7 +94,7 @@ hold on
 plot(homoclinic_br(homds.PeriodIdx+1,:), ...
      homoclinic_br(homds.PeriodIdx+2,:));
 % Bogdanov-Takens parameter-dependent smooth orbital normal form coefficients
-bt = BT_nmfm_orbital(odefile, bt, ap);
+bt = BT_nmfm_orbital(odefile, bt, ap, BToptions);
 a   = bt.nmfm.a;
 b   = bt.nmfm.b;
 K10 = bt.nmfm.K10;
