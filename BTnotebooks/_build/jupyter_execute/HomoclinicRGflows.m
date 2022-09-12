@@ -177,7 +177,7 @@ options.messages = false;
 options.correct = false;
 options.TTolerance = 1.0e-05;
 
-amplitudes = linspace(1.0e-03, 5.0e-02, 10);
+amplitudes = linspace(1.0e-03, 1.0e-01, 10);
 XPredicted = zeros(660,length(amplitudes));
 XCorrected = zeros(660,length(amplitudes));
 for j=1:length(amplitudes)
@@ -363,5 +363,3 @@ writematrix([amplitudes', relativeErrors{3,2}(:)], '../../data/HomRGflowsLPorder
 writematrix([amplitudes', relativeErrors{3,1}(:)], '../../data/HomRGflowsLPorder3orbital.csv', 'Delimiter', ' ')
 writematrix([amplitudes', relativeErrors{3,4}(:)], '../../data/HomRGflowsRegularPerturbationL2.csv', 'Delimiter', ' ')
 writematrix([amplitudes', relativeErrors{3,5}(:)], '../../data/HomRGflowsLPHypernormalForm.csv', 'Delimiter', ' ')
-
-
